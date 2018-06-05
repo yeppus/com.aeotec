@@ -1,57 +1,73 @@
 [
   {
-    "id": 3,
+    "id": "3",
     "type": "number",
     "label": {
-      "en": "Motion cancellation (seconds)",
-      "nl": "Beweging annulering (seconden)"
+      "en": "No motion detection timeout",
+      "nl": "Geen beweging gedetecteerd na"
     },
     "hint": {
-      "en": "How many seconds does the motion alarm stay \"on\". If the value is bigger than 255, then the value should be rounded to next integer in minutes",
-      "nl": "Hoeveel seconden blijft het bewegings alarm \"aan\". Als de waarde hoger is dan 255, dan moet de waarde afgerond worden naar de dichtbijzijnste minuut"
+      "en": "This parameter ({{zwaveParameterIndex}}) determines for how long the motion detection alarm will stay on after detection.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaatl voor hoe lang het bewegingsalarm actief blijft nadat er beweging is gedetecteerd."
     },
-    "value": 240,
+    "zwave": {
+      "index": 3,
+      "size": 2
+    },
     "attr": {
       "min": 1,
       "max": 15300
-    }
+    },
+    "value": 240
   },
   {
-    "id": 4,
+    "id": "4",
     "type": "checkbox",
     "label": {
-      "en": "Motion alarm",
-      "nl": "Bewegingsalarm"
+      "en": "Enable motion sensor",
+      "nl": "Schakel bewegingsdetectie in"
     },
     "hint": {
-      "en": "Should the sensor's motion alarm be enabled or not",
-      "nl": "Activeer de sensor's bewegingsalarm"
+      "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the device detects motion.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het apparaat beweging detecteert."
+    },
+    "zwave": {
+      "index": 4,
+      "size": 1
     },
     "value": true
   },
   {
-    "id": 40,
+    "id": "40",
     "type": "checkbox",
     "label": {
       "en": "Selective reporting",
       "nl": "Selectieve updates"
     },
     "hint": {
-      "en": "The sensor will only send the updated value if the value is bigger than the threshold",
-      "nl": "De sensor zal alleen de waarden doorgeven als deze hoger zijn dan de drempel"
+      "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the sensor will only send updated values if the value change is bigger than the threshold.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het apparaat alleen waardes zal doorgeven wanneer de waardeverandering groter is dan de drempel."
+    },
+    "zwave": {
+      "index": 40,
+      "size": 1
     },
     "value": true
   },
   {
-    "id": 41,
+    "id": "41",
     "type": "number",
     "label": {
       "en": "Temperature threshold",
       "nl": "Temperatuur drempel"
     },
     "hint": {
-      "en": "The sensor will only send the value if the changed temperature (percentage) value is bigger than the threshold",
-      "nl": "De sensor zal alleen de waarde doorgeven als de veranderde temperatuur (percentage) waarde hoger is dan de drempel"
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the reporting threshold for the temperature value.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de rapportage drempel voor de temperatuur waarde."
+    },
+    "zwave": {
+      "index": 41,
+      "size": 2
     },
     "value": 1,
     "attr": {
@@ -60,15 +76,19 @@
     }
   },
   {
-    "id": 42,
+    "id": "42",
     "type": "number",
     "label": {
       "en": "Humidity threshold",
       "nl": "Lucht vochtigheid drempel"
     },
     "hint": {
-      "en": "The sensor will only send the value if the changed humidity (percentage) value is bigger than the threshold",
-      "nl": "De sensor zal alleen de waarde doorgeven als de veranderde lucht vochtigheid (percentage) waarde hoger is dan de drempel"
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the reporting threshold for the humidity value.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de rapportage drempel voor de vochtigheids waarde."
+    },
+    "zwave": {
+      "index": 42,
+      "size": 2
     },
     "value": 5,
     "attr": {
@@ -77,15 +97,19 @@
     }
   },
   {
-    "id": 43,
+    "id": "43",
     "type": "number",
     "label": {
       "en": "Luminance threshold",
       "nl": "Helderheid drempel"
     },
     "hint": {
-      "en": "The sensor will only send the value if the changed luminance (lux) value is bigger than the threshold",
-      "nl": "De sensor zal alleen de waarde doorgeven als de veranderde helderheid (lux) waarde hoger is dan de drempel"
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the reporting threshold for the luminance value.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de rapportage drempel voor de helderheids waarde."
+    },
+    "zwave": {
+      "index": 43,
+      "size": 2
     },
     "value": 50,
     "attr": {
@@ -94,15 +118,19 @@
     }
   },
   {
-    "id": 44,
+    "id": "44",
     "type": "number",
     "label": {
       "en": "Battery level threshold",
       "nl": "Batterij level drempel"
     },
     "hint": {
-      "en": "The sensor will only send the value if the changed battery level (percentage) value is bigger than the threshold",
-      "nl": "De sensor zal alleen de waarde doorgeven als de veranderde batterij level (percentage) waarde hoger is dan de drempel"
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the reporting threshold for the battery level.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de rapportage drempel voor het batterij percentage."
+    },
+    "zwave": {
+      "index": 44,
+      "size": 2
     },
     "value": 5,
     "attr": {
@@ -111,15 +139,19 @@
     }
   },
   {
-    "id": 102,
+    "id": "102",
     "type": "dropdown",
     "label": {
-      "en": "Reports to association group 2",
-      "nl": "Metingen naar associatie groep 2"
+      "en": "Information reports send to association group 2",
+      "nl": "Informatie updates naar associatie groep 2"
     },
     "hint": {
-      "en": "Which reports need to send automatically in timing intervals for association group 2",
-      "nl": "Welke metingen worden automatisch per interval verzonden naar associatie groep 2"
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what information is sent to the devices in association group 2.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke informatie er wordt verstuurd naar de apparaten in de 2e associatie groep."
+    },
+    "zwave": {
+      "index": 102,
+      "size": 4
     },
     "value": "0",
     "values": [
@@ -127,70 +159,74 @@
         "id": "0",
         "label": {
           "en": "Nothing",
-          "nl": "Niets"
+          "nl": "Geen"
         }
       },
       {
         "id": "33",
         "label": {
-          "en": "Battery & temperature",
-          "nl": "Batterij & temperatuur"
+          "en": "Battery and temperature",
+          "nl": "Batterij en temperatuur"
         }
       },
       {
         "id": "65",
         "label": {
-          "en": "Battery & luminance",
-          "nl": "Batterij & helderheid"
+          "en": "Battery and luminosity",
+          "nl": "Batterij en lichtsterkte"
         }
       },
       {
         "id": "129",
         "label": {
-          "en": "Battery & humidity",
-          "nl": "Batterij & luchtvochtigheid"
+          "en": "Battery and humidity",
+          "nl": "Batterij en vochtigheidsgraad"
         }
       },
       {
         "id": "97",
         "label": {
-          "en": "Battery, temperature & luminance",
-          "nl": "Batterij, temperatuur & helderheid"
+          "en": "Battery, temperature and luminosity",
+          "nl": "Batterij, temperatuur, en lichtsterkte"
         }
       },
       {
         "id": "161",
         "label": {
-          "en": "Battery, temperature & humidity",
-          "nl": "Batterij, temperatuur & luchtvochtigheid"
+          "en": "Battery, temperature and humidity",
+          "nl": "Batterij, temperatuur en vochtigheidsgraad"
         }
       },
       {
         "id": "193",
         "label": {
-          "en": "Battery, luminance & humidity",
-          "nl": "Batterij, helderheid & luchtvochtigheid"
+          "en": "Battery, luminosity and humidity",
+          "nl": "Batterij, lichtsterkte en vochtigheidsgraad"
         }
       },
       {
         "id": "225",
         "label": {
-          "en": "Battery, temperature, luminance & humidity",
-          "nl": "Batterij, temperatuur, helderheid & luchtvochtigheid"
+          "en": "Battery, temperature, luminosity and humidity",
+          "nl": "Batterij, temperatuur, lichtsterkte en vochtigheidsgraad"
         }
       }
     ]
   },
   {
-    "id": 103,
+    "id": "103",
     "type": "dropdown",
     "label": {
-      "en": "Reports to association group 3",
-      "nl": "Metingen naar associatie groep 3"
+      "en": "Information reports send to association group 3",
+      "nl": "Informatie updates naar associatie groep 3"
     },
     "hint": {
-      "en": "Which reports need to be send automatically per interval for association group 3",
-      "nl": "Welke metingen worden automatisch per interval verzonden naar associatie groep 3"
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what information is sent to the devices in association group 3.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke informatie er wordt verstuurd naar de apparaten in de 3e associatie groep."
+    },
+    "zwave": {
+      "index": 103,
+      "size": 4
     },
     "value": "0",
     "values": [
@@ -198,109 +234,121 @@
         "id": "0",
         "label": {
           "en": "Nothing",
-          "nl": "Niets"
+          "nl": "Geen"
         }
       },
       {
         "id": "33",
         "label": {
-          "en": "Battery & temperature",
-          "nl": "Batterij & temperatuur"
+          "en": "Battery and temperature",
+          "nl": "Batterij en temperatuur"
         }
       },
       {
         "id": "65",
         "label": {
-          "en": "Battery & luminance",
-          "nl": "Batterij & helderheid"
+          "en": "Battery and luminosity",
+          "nl": "Batterij en lichtsterkte"
         }
       },
       {
         "id": "129",
         "label": {
-          "en": "Battery & humidity",
-          "nl": "Batterij & luchtvochtigheid"
+          "en": "Battery and humidity",
+          "nl": "Batterij en vochtigheidsgraad"
         }
       },
       {
         "id": "97",
         "label": {
-          "en": "Battery, temperature & luminance",
-          "nl": "Batterij, temperatuur & helderheid"
+          "en": "Battery, temperature and luminosity",
+          "nl": "Batterij, temperatuur, en lichtsterkte"
         }
       },
       {
         "id": "161",
         "label": {
-          "en": "Battery, temperature & humidity",
-          "nl": "Batterij, temperatuur & luchtvochtigheid"
+          "en": "Battery, temperature and humidity",
+          "nl": "Batterij, temperatuur en vochtigheidsgraad"
         }
       },
       {
         "id": "193",
         "label": {
-          "en": "Battery, luminance & humidity",
-          "nl": "Batterij, helderheid & luchtvochtigheid"
+          "en": "Battery, luminosity and humidity",
+          "nl": "Batterij, lichtsterkte en vochtigheidsgraad"
         }
       },
       {
         "id": "225",
         "label": {
-          "en": "Battery, temperature, luminance & humidity",
-          "nl": "Batterij, temperatuur, helderheid & luchtvochtigheid"
+          "en": "Battery, temperature, luminosity and humidity",
+          "nl": "Batterij, temperatuur, lichtsterkte en vochtigheidsgraad"
         }
       }
     ]
   },
   {
-    "id": 111,
+    "id": "111",
     "type": "number",
     "label": {
-      "en": "Unsolicited reports interval for Homey (group 1)",
-      "nl": "Ongevraagde meting verstuurinterval naar Homey (group 1)"
-    },
-    "value": 300,
-    "attr": {
-      "min": 5,
-      "max": 2678400
+      "en": "Reporting interval association group 1",
+      "nl": "Informatie update interval associatie groep 1"
     },
     "hint": {
-      "en": "Interval to send out reports to association group 1 (Homey). (5 - 2678400 seconds)",
-      "nl": "Interval voor het verzenden van metingen naar associatie groep 1 (Homey). (5 - 2678400 seconds)"
-    }
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval between reports to Homey.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd tussen rapportages naar Homey."
+    },
+    "zwave": {
+      "index": 111,
+      "size": 4
+    },
+    "attr": {
+      "min": 1,
+      "max": 2678400
+    },
+    "value": 300
   },
   {
-    "id": 112,
+    "id": "112",
     "type": "number",
     "label": {
-      "en": "Unsolicited reports interval for association group 2",
-      "nl": "Ongevraagde meting verstuurinterval naar associatie groep 2"
-    },
-    "value": 1800,
-    "attr": {
-      "min": 5,
-      "max": 2678400
+      "en": "Reporting interval association group 2",
+      "nl": "Informatie update interval associatie groep 2"
     },
     "hint": {
-      "en": "Interval to send out reports to association group 2. (5 - 2678400 seconds)",
-      "nl": "Interval voor het verzenden van metingen naar associatie groep 2. (5 - 2678400 seconds)"
-    }
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval between reports to devices in association group 2.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd tussen rapportages naar apparaten in de 2e associatie groep."
+    },
+    "zwave": {
+      "index": 112,
+      "size": 4
+    },
+    "attr": {
+      "min": 1,
+      "max": 2678400
+    },
+    "value": 1800
   },
   {
-    "id": 113,
+    "id": "113",
     "type": "number",
     "label": {
-      "en": "Unsolicited reports interval for association group 3",
-      "nl": "Ongevraagde meting verstuurinterval naar associatie groep 3"
-    },
-    "value": 1800,
-    "attr": {
-      "min": 5,
-      "max": 2678400
+      "en": "Reporting interval association group 3",
+      "nl": "Informatie update interval associatie groep 3"
     },
     "hint": {
-      "en": "Interval to send out reports to association group 3. (5 - 2678400 seconds)",
-      "nl": "Interval voor het verzenden van metingen naar associatie groep 3. (5 - 2678400 seconds)"
-    }
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval between reports to devices in association group 3.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd tussen rapportages naar apparaten in de 3e associatie groep."
+    },
+    "zwave": {
+      "index": 113,
+      "size": 4
+    },
+    "attr": {
+      "min": 1,
+      "max": 2678400
+    },
+    "value": 1800
   }
 ]
