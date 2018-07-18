@@ -1,14 +1,13 @@
 {
   "id": "ZW120",
   "name": {
-    "en": "Water Sensor 6"
+    "en": "Door/Window Sensor Gen5"
   },
   "class": "sensor",
   "capabilities": [
     "measure_battery",
-    "alarm_water",
-    "measure_temperature",
-    "alarm_tamper"
+    "alarm_tamper",
+    "alarm_contact"
   ],
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",
@@ -39,13 +38,6 @@
           "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate. The sensor binary report, basic set or notification report command can be sent in this group when the Sensor is triggered."
         }
       }
-    },
-    "defaultConfiguration": [
-      {
-        "id": 64,
-        "size": 1,
-        "value": 0
-      }
-    ]
+    }
   }
 }

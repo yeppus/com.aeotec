@@ -1,157 +1,135 @@
 [
   {
-    "id": "86",
-    "type": "checkbox",
+    "id": "1",
+    "value": true,
     "label": {
-      "en": "Enable the acoustic alarm",
-      "nl": "Schakel het akoestische alarm in"
+      "en": "Which value of the Sensor Binary Report will be sent when the door is Opened/Closed."
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the acoustic alarm is enabled.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het akoestische alarm ingeschakeld is."
+      "en": "To set which value of the Sensor Binary Report will be sent when the door is Opened/Closed."
     },
     "zwave": {
-      "index": 86,
+      "index": 1,
       "size": 1
     },
-    "value": true
-  },
-  {
-    "id": "87",
-    "type": "dropdown",
-    "label": {
-      "en": "Acoustic alarm triggers",
-      "nl": "Triggers voor het akoestische alarm"
-    },
-    "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines which events trigger the acoustic alarm.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke geberutenissen het akoestische alarm af laten gaan."
-    },
-    "zwave": {
-      "index": 87,
-      "size": 4
-    },
-    "values": [
-      {
-        "id": "1",
-        "label": {
-          "en": "On water leakage",
-          "nl": "Wanneer er water lekt"
-        }
-      },
-      {
-        "id": "2",
-        "label": {
-          "en": "On device vibration",
-          "nl": "Wanneer het apparaat geschud wordt"
-        }
-      },
-      {
-        "id": "4",
-        "label": {
-          "en": "On device tilt",
-          "nl": "Wanneer het apparaat gekanteld wordt"
-        }
-      },
-      {
-        "id": "16",
-        "label": {
-          "en": "On temperature too low",
-          "nl": "Wanneer het apparaat te koud is"
-        }
-      },
-      {
-        "id": "32",
-        "label": {
-          "en": "On temperature too high",
-          "nl": "Wanneer het apparaat te warm is"
-        }
-      }
-    ],
-    "value": "1"
+    "type": "checkbox"
   },
   {
     "id": "111",
-    "type": "number",
+    "value": 0,
     "label": {
-      "en": "Interval between reports",
-      "nl": "Rapportage interval"
+      "en": "Set the interval time of battery report."
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the time between reports to associated devices.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd tussen rapportages naar geassocieerde apparaten."
+      "en": "Set the interval time of battery report.\r\nNote:\r\n1, if the value is less than 10, the time unit is second.\r\nIf the value is more than 10, the time unit is 4 minutes, which means if the value is more than 10 and less than 240, the interval time is 4 minutes. If the value is more than 240 and less than 480, the interval is 8 minutes.\r\n2, if the current battery report falls below the low battery value (configurable parameter 39), it will send battery report=0xFF.\r\n"
     },
     "zwave": {
       "index": 111,
       "size": 4
     },
     "attr": {
-      "min": 5,
-      "max": 2678400
-    },
-    "value": 5
-  },
-  {
-    "id": "201",
-    "type": "number",
-    "label": {
-      "en": "Temperature sensor calibration",
-      "nl": "Kalibratie temperatuursensor"
-    },
-    "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the value added to the measured temperature to get to an accurate reading.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de waarde die wordt opgeteld bij de gemeten waarde om tot een correcte meting uit te komen."
-    },
-    "zwave": {
-      "index": 201,
-      "size": 2
-    },
-    "attr": {
-      "min": -128,
-      "max": 127
-    },
-    "value": 0
-  },
-  {
-    "id": "50",
-    "type": "number",
-    "label": {
-      "en": "Low temperature threshold",
-      "nl": "Drempel lage temperatuur"
-    },
-    "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the temperature below which the low temperature alarm will be triggered.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de temperatuur waaronder het lage temperatuur alarm afgaat."
-    },
-    "zwave": {
-      "index": 50,
-      "size": 4
-    },
-    "attr": {
       "min": 0,
       "max": 2147483647
     },
-    "value": 0
+    "type": "number"
   },
   {
-    "id": "49",
-    "type": "",
+    "id": "121",
+    "value": "256",
     "label": {
-      "en": "High temperature threshold",
-      "nl": "Drempel hoge temperatuur"
+      "en": "To configure which sensor report will be sent when the Sensor is triggered On/Off."
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the temperature above which the high temperature alarm will be triggered.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de temperatuur waarboven het hoge temperatuur alarm afgaat."
+      "en": "To configure which sensor report will be sent when the Sensor is triggered On/Off."
     },
     "zwave": {
-      "index": 49,
+      "index": 121,
       "size": 4
     },
-    "attr": {
-      "min": 0,
-      "max": 2147483647
+    "values": [
+      {
+        "id": "16",
+        "label": {
+          "en": "Basic Set CC is selected."
+        }
+      },
+      {
+        "id": "256",
+        "label": {
+          "en": "Sensor Binary Report CC is selected."
+        }
+      },
+      {
+        "id": "272",
+        "label": {
+          "en": "Basic Set CC and Sensor Binary Report CC are selected."
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "2",
+    "value": true,
+    "label": {
+      "en": "Enable/disable wake up 10 minutes when re-power on the Sensor."
     },
-    "value": 0
+    "hint": {
+      "en": "Enable/disable wake up 10 minutes when re-power on the Sensor."
+    },
+    "zwave": {
+      "index": 2,
+      "size": 1
+    },
+    "type": "checkbox"
+  },
+  {
+    "id": "255",
+    "value": false,
+    "label": {
+      "en": "Reset the Sensor."
+    },
+    "hint": {
+      "en": "Reset the Sensor."
+    },
+    "zwave": {
+      "index": 255,
+      "size": 4
+    },
+    "type": "checkbox"
+  },
+  {
+    "id": "3",
+    "value": true,
+    "label": {
+      "en": "Which value of the Basic Set will be sent when the door is Opened/Closed. "
+    },
+    "hint": {
+      "en": "To set which value of the Basic Set will be sent when the door is Opened/Closed. "
+    },
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "type": "checkbox"
+  },
+  {
+    "id": "39",
+    "value": 10,
+    "label": {
+      "en": "Set the low battery value."
+    },
+    "hint": {
+      "en": "Set the low battery value.\r\n(10% to 50%).\r\n"
+    },
+    "zwave": {
+      "index": 39,
+      "size": 1
+    },
+    "attr": {
+      "min": 10,
+      "max": 50
+    },
+    "type": "number"
   }
 ]
