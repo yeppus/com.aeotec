@@ -44,11 +44,11 @@
     "type": "dropdown",
     "label": {
       "en": "Reports to association group 3",
-      "nl": "Metingen naar associatie groep 3"
+      "nl": "Updates naar associatie groep 3"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines what reports are sent to association group 3.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke raporten er worden verzonden naar associatie groep 3."
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke updates er worden verzonden naar associatie groep 3."
     },
     "zwave": {
       "index": 81,
@@ -77,11 +77,11 @@
     "type": "dropdown",
     "label": {
       "en": "Reports to association group 4",
-      "nl": "Metingen naar associatie groep 4"
+      "nl": "Updates naar associatie groep 4"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines what reports are sent to association group 4.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke raporten er worden verzonden naar associatie groep 4."
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke updates er worden verzonden naar associatie groep 4."
     },
     "zwave": {
       "index": 82,
