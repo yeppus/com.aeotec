@@ -3,8 +3,8 @@
     "id": "20",
     "type": "dropdown",
     "label": {
-      "en": "Configure the output load status after re-power",
-      "nl": "Zet na een stroomonderbreking deze status"
+      "en": "Default behaviour after re-power",
+      "nl": "Standaard gedrag na stroomonderbreking"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines the behaviour after power was disconnected.",
