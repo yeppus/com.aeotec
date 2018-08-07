@@ -103,14 +103,14 @@
               {
                 "id": "Key Slide Up",
                 "label": {
-                  "en": "Slide Up",
-                  "nl": "Omhoog Schuiven"
+                  "en": "Slide up",
+                  "nl": "Omhoog schuiven"
                 }
               },
               {
                 "id": "Key Slide Down",
                 "label": {
-                  "en": "Slide Down",
+                  "en": "Slide down",
                   "nl": "Omlaag schuiven"
                 }
               }
@@ -125,8 +125,8 @@
           "nl": "Dim niveau gezonden"
         },
         "hint": {
-          "en": "The dim level is send when you slide your finger over the wallmote.\nThe brightness level will be the height you stopped at (full height of the wallmote)",
-          "nl": "Het dim niveau word gezonden bij het schuiven van de vinger over de wallmote.\nHet helderheids niveau is de hoogte waar je stopt (volle hoogte van de wallmote)"
+          "en": "The dim level is send when you slide your finger over the wallmote. The brightness level will be the height you stopped at. (full height of the Wallmote Duo)",
+          "nl": "Het dim niveau word gezonden bij het schuiven van de vinger over de wallmote. Het helderheids niveau is de hoogte waar je stopt. (volle hoogte van de Wallmote Duo)"
         },
         "tokens": [
           {
@@ -174,8 +174,8 @@
           "nl": "Batterij volledig opgeladen"
         },
         "hint": {
-          "en": "This card will (for now) only trigger if the device has been included as secure (current state is in the device's settings). Will also work unscure in a future Homey update.",
-          "nl": "Deze kaart zal (voor nu) alleen activeren als de Wallmote beveiligd is toevoegd (huidige staat is in de apparaat zijn settings). Zal ook onbeveiligd werken in een toekomstige Homey update"
+          "en": "This card will only trigger if the device has been included as secure.",
+          "nl": "Deze kaart zal alleen activeren als de Wallmote beveiligd is toevoegd."
         },
         "args": [
           {
@@ -217,8 +217,8 @@
         "learnmode": {
           "image": "/drivers/ZW129/assets/learnmode.svg",
           "instruction": {
-            "en": "Secure inclusion: Double press the action button on the Wallmote Duo. \n Non-secure inclusion: Single press the action button on the Wallmote Duo",
-            "nl": "Beveiligd toevoegen: Druk tweemaal op de actie knop op de Wallmote Duo. \n Onbeveiligd toevoegen: Druk eenmaal op de actie knop op de Wallmote Duo."
+            "en": "Secure inclusion: Double press the action button on the Wallmote Duo. Non-secure inclusion: Single press the action button on the Wallmote Duo",
+            "nl": "Beveiligd toevoegen: Druk tweemaal op de actie knop op de Wallmote Duo. Onbeveiligd toevoegen: Druk eenmaal op de actie knop op de Wallmote Duo."
           }
         },
         "unlearnmode": {
@@ -346,8 +346,8 @@
         {
           "type": "group",
           "label": {
-            "en": "LED Color When Sending Data",
-            "nl": "LED Kleur Bij Verzenden Data"
+            "en": "LED color when sending data",
+            "nl": "LED kleur bij verzenden data"
           },
           "children": [
             {
@@ -453,8 +453,8 @@
               "id": "rgb_name_level",
               "type": "number",
               "label": {
-                "en": "Brightness Namecolor",
-                "nl": "Helderheid Naamkleur"
+                "en": "Brightness namecolor",
+                "nl": "Helderheid naamkleur"
               },
               "hint": {
                 "en": "This parameter (39) determines the brightness level of the color.",

@@ -74,8 +74,8 @@
   {
     "type": "group",
     "label": {
-      "en": "LED Color When Sending Data",
-      "nl": "LED Kleur Bij Verzenden Data"
+      "en": "LED color when sending data",
+      "nl": "LED kleur bij verzenden data"
     },
     "children": [
       {
@@ -181,8 +181,8 @@
         "id": "rgb_name_level",
         "type": "number",
         "label": {
-          "en": "Brightness Namecolor",
-          "nl": "Helderheid Naamkleur"
+          "en": "Brightness namecolor",
+          "nl": "Helderheid naamkleur"
         },
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines the brightness level of the color.",
