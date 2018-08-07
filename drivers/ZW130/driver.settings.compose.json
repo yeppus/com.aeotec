@@ -3,8 +3,8 @@
     "id": "touch_sound",
     "type": "checkbox",
     "label": {
-      "en": "Touch Sound",
-      "nl": "Aanraak Geluid"
+      "en": "Touch sound",
+      "nl": "Aanraak geluid"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the {{driverNameEn}} makes a sound when touched.",
@@ -20,8 +20,8 @@
     "id": "touch_vibration",
     "type": "checkbox",
     "label": {
-      "en": "Touch Vibration",
-      "nl": "Aanraak Trillen"
+      "en": "Touch vibration",
+      "nl": "Aanraak trillen"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the {{driverNameEn}} vibrates when touched.",
@@ -37,8 +37,8 @@
     "id": "slide_function",
     "type": "checkbox",
     "label": {
-      "en": "Slide Dimming Function",
-      "nl": "Swipe Dim Functie"
+      "en": "Slide dimming function",
+      "nl": "Swipe dim functie"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not dimming on slide is enabled.",
@@ -54,8 +54,8 @@
     "id": "low_battery",
     "type": "number",
     "label": {
-      "en": "Low Battery Level",
-      "nl": "Laag Batterij Niveau"
+      "en": "Low battery level",
+      "nl": "Laag batterij niveau"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines the percentage of battery value to at which the low battery alarm will go off.",
@@ -74,16 +74,16 @@
   {
     "type": "group",
     "label": {
-      "en": "LED Color When Sending Data",
-      "nl": "LED Kleur Bij Verzenden Data"
+      "en": "LED color when sending data",
+      "nl": "LED kleur bij verzenden data"
     },
     "children": [
       {
         "id": "rgb_name",
         "type": "dropdown",
         "label": {
-          "en": "Color Name",
-          "nl": "Kleur Naam"
+          "en": "Color name",
+          "nl": "Kleur naam"
         },
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines the colour of the LED when sending data. * = Unfortunately the LED can't be turned off completely, this is the most faint color.",
@@ -181,8 +181,8 @@
         "id": "rgb_name_level",
         "type": "number",
         "label": {
-          "en": "Brightness Namecolor",
-          "nl": "Helderheid Naamkleur"
+          "en": "Brightness namecolor",
+          "nl": "Helderheid naamkleur"
         },
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines the brightness level of the color.",
