@@ -111,7 +111,7 @@
           },
           "hint": {
             "en": "This parameter (20) determines the behaviour after power was disconnected.",
-            "nl": "Deze parameter (20) bepaalt het gedrag nadat de stroomtoevoor is verbroken."
+            "nl": "Deze parameter (20) bepaalt het gedrag nadat de stroomtoevoer is verbroken."
           },
           "zwave": {
             "index": 20,
@@ -217,7 +217,7 @@
           },
           "hint": {
             "en": "This parameter (120) determines what type of input is connected to input 1.",
-            "nl": "Deze parameter (120) bepaalt wat voor een type input apparaat er is verbonden op input 1."
+            "nl": "Deze parameter (120) bepaalt welk type input apparaat er is verbonden aan input 1."
           },
           "zwave": {
             "index": 120,
@@ -264,7 +264,7 @@
           },
           "hint": {
             "en": "This parameter (121) determines what type of input is connected to input 2.",
-            "nl": "Deze parameter (121) bepaalt wat voor een type input apparaat er is verbonden op input 2."
+            "nl": "Deze parameter (121) bepaalt welk type input apparaat er is verbonden aan input 2."
           },
           "zwave": {
             "index": 121,
