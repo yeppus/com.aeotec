@@ -91,8 +91,8 @@
         "nl": "Het helderheidsniveau is verzonden"
       },
       "hint": {
-        "en": "The dim level is send when you slide your finger over the wallmote. The brightness level will be the height you stopped at. (full height of the {{driverNameEn}})",
-        "nl": "Het helderheidsniveau wordt verzonden bij het schuiven van de vinger over de wallmote. Het helderheidsniveau is de hoogte waar je stopt. (volle hoogte van de {{driverNameNl}})"
+        "en": "The dim level is send when you slide your finger over the wallmote. The brightness level will be the height you stopped at (full height of the {{driverNameEn}}).",
+        "nl": "Het helderheidsniveau wordt verzonden bij het schuiven van de vinger over de wallmote. Het helderheidsniveau is de hoogte waar je stopt (volle hoogte van de {{driverNameNl}})."
       },
       "tokens": [
         {
