@@ -7,8 +7,8 @@
       "nl": "Gerapporteerde Sensor Binary waarde bij het openen/sluiten."
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines what value will be sent in the Sensor Binary Report when the door is opened/closed.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke waarde er wordt verzonden in het Sensor Binary Report wanneer de deur opent/sluit."
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what value will be sent in the Sensor Binary report when the door is opened/closed.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke waarde er wordt verzonden in het Sensor Binary report wanneer de deur opent/sluit."
     },
     "zwave": {
       "index": 1,
@@ -21,7 +21,7 @@
     "value": 0,
     "label": {
       "en": "Report interval for battery reports.",
-      "nl": "Rapportage interval voor batterij rapporten."
+      "nl": "Rapportage interval voor batterijniveau."
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines the time interval between battery reports.",
@@ -42,11 +42,11 @@
     "value": "256",
     "label": {
       "en": "On/off report command",
-      "nl": "Rapport bij aan/uit"
+      "nl": "Report bij aan/uit"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines what report will be sent when the sensor is triggered on/off.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type rapport er wordt verzonden wanneer de sensor aan/uit geschakelt is."
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type report er wordt verzonden wanneer de sensor aan/uit geschakelt is."
     },
     "zwave": {
       "index": 121,
@@ -62,13 +62,13 @@
       {
         "id": "256",
         "label": {
-          "en": "Sensor Binary Report CC is selected."
+          "en": "Sensor Binary report CC is selected."
         }
       },
       {
         "id": "272",
         "label": {
-          "en": "Basic Set CC and Sensor Binary Report CC are selected."
+          "en": "Basic Set CC and Sensor Binary report CC are selected."
         }
       }
     ],
@@ -116,8 +116,8 @@
       "nl": "Gerapporteerde Basic Set waarde bij het openen/sluiten."
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines what value will be sent in the Basic Set Report when the door is opened/closed.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke waarde er wordt verzonden in het Basic Set Report wanneer de deur opent/sluit."
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what value will be sent in the Basic Set report when the door is opened/closed.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke waarde er wordt verzonden in het Basic Set report wanneer de deur opent/sluit."
     },
     "zwave": {
       "index": 3,
