@@ -44,7 +44,7 @@
   "flow": {
     "triggers": [
       {
-        "id": "zw130_scene",
+        "id": "zw129_scene",
         "title": {
           "en": "Scene is activated",
           "nl": "Scene is geactiveerd"
@@ -53,7 +53,7 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=ZW130"
+            "filter": "driver_id=ZW129"
           },
           {
             "name": "button",
@@ -62,29 +62,15 @@
               {
                 "id": "1",
                 "label": {
-                  "en": "Top left",
-                  "nl": "Links boven"
+                  "en": "Left",
+                  "nl": "Links"
                 }
               },
               {
                 "id": "2",
                 "label": {
-                  "en": "Top right",
-                  "nl": "Rechts boven"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Bottom left",
-                  "nl": "Links onder"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Bottom right",
-                  "nl": "Rechts onder"
+                  "en": "Right",
+                  "nl": "Rechts"
                 }
               }
             ]
@@ -117,14 +103,14 @@
               {
                 "id": "Key Slide Up",
                 "label": {
-                  "en": "Slide Up",
-                  "nl": "Omhoog Schuiven"
+                  "en": "Slide up",
+                  "nl": "Omhoog schuiven"
                 }
               },
               {
                 "id": "Key Slide Down",
                 "label": {
-                  "en": "Slide Down",
+                  "en": "Slide down",
                   "nl": "Omlaag schuiven"
                 }
               }
@@ -133,14 +119,14 @@
         ]
       },
       {
-        "id": "zw130_dim",
+        "id": "zw129_dim",
         "title": {
-          "en": "Dim level was send",
-          "nl": "Dim niveau verzonden"
+          "en": "Dim level has been sent",
+          "nl": "Het helderheidsniveau is verzonden"
         },
         "hint": {
-          "en": "The dim level is send when you slide your finger over the wallmote. The brightness level will be the height you stopped at. (full height of the Wallmote Quad)",
-          "nl": "Het dim niveau wordt verzonden bij het schuiven van de vinger over de wallmote. Het helderheidsniveau is de hoogte waar je stopt. (volle hoogte van de Wallmote Quad)"
+          "en": "The dim level is send when you slide your finger over the Wallmote Duo. The brightness level will be the height you stopped at (full height of the Wallmote Duo).",
+          "nl": "Het helderheidsniveau word verzonden bij het schuiven van de vinger over de Wallmote Duo. Het helderheidsniveau is de hoogte waar je stopt (volle hoogte van de Wallmote Duo)."
         },
         "tokens": [
           {
@@ -157,7 +143,7 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=ZW130"
+            "filter": "driver_id=ZW129"
           },
           {
             "name": "button",
@@ -166,29 +152,15 @@
               {
                 "id": "1",
                 "label": {
-                  "en": "Top left",
-                  "nl": "Links boven"
+                  "en": "Left",
+                  "nl": "Links"
                 }
               },
               {
                 "id": "2",
                 "label": {
-                  "en": "Top right",
-                  "nl": "Rechts boven"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Bottom left",
-                  "nl": "Links onder"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Bottom right",
-                  "nl": "Rechts onder"
+                  "en": "Right",
+                  "nl": "Rechts"
                 }
               }
             ]
@@ -196,20 +168,20 @@
         ]
       },
       {
-        "id": "zw130_battery_full",
+        "id": "zw129_battery_full",
         "title": {
           "en": "Battery fully charged",
           "nl": "Batterij volledig opgeladen"
         },
         "hint": {
-          "en": "This card will only trigger if the Wallmote Quad has been included as secure.",
-          "nl": "Deze kaart zal alleen activeren als de Wallmote Quad beveiligd is toevoegd."
+          "en": "This card will only trigger if the Wallmote Duo has been included as secure.",
+          "nl": "Deze kaart zal alleen activeren als de Wallmote Duo beveiligd is toevoegd."
         },
         "args": [
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=ZW130"
+            "filter": "driver_id=ZW129"
           }
         ]
       }
@@ -217,9 +189,9 @@
   },
   "drivers": [
     {
-      "id": "ZW130",
+      "id": "ZW129",
       "name": {
-        "en": "Wallmote Quad"
+        "en": "Wallmote Duo"
       },
       "class": "button",
       "capabilities": [
@@ -227,8 +199,8 @@
         "alarm_battery"
       ],
       "images": {
-        "large": "/drivers/ZW130/assets/images/large.png",
-        "small": "/drivers/ZW130/assets/images/small.png"
+        "large": "/drivers/ZW129/assets/images/large.png",
+        "small": "/drivers/ZW129/assets/images/small.png"
       },
       "zwave": {
         "manufacturerId": 134,
@@ -238,21 +210,21 @@
           513
         ],
         "productId": [
-          130
+          129
         ],
-        "zwaveAllianceProductId": 2153,
-        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2153/Aeon Labs WallMote Quad manual.pdf",
+        "zwaveAllianceProductId": 2234,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2234/Aeon Labs WallMote manual.pdf",
         "learnmode": {
-          "image": "/drivers/ZW130/assets/learnmode.svg",
+          "image": "/drivers/ZW129/assets/learnmode.svg",
           "instruction": {
-            "en": "Secure inclusion: Double press the action button on the Wallmote Quad. Non-secure inclusion: Single press the action button on the Wallmote Quad.",
-            "nl": "Beveiligd toevoegen: Druk tweemaal op de actie knop op de Wallmote Quad. Onbeveiligd toevoegen: Druk eenmaal op de actie knop op de Wallmote Quad."
+            "en": "Secure inclusion: Double press the action button on the Wallmote Duo. Non-secure inclusion: Single press the action button on the Wallmote Duo.",
+            "nl": "Beveiligd toevoegen: Druk tweemaal op de actie knop op de Wallmote Duo. Onbeveiligd toevoegen: Druk eenmaal op de actie knop op de Wallmote Duo."
           }
         },
         "unlearnmode": {
           "instruction": {
-            "en": "Press the action button on the Wallmote Quad",
-            "nl": "Druk op de actie knop op de Wallmote Quad"
+            "en": "Press the action button on the Wallmote Duo.",
+            "nl": "Druk op de actie knop op de Wallmote Duo."
           }
         },
         "associationGroups": [
@@ -267,50 +239,26 @@
           },
           "2": {
             "hint": {
-              "en": "Devices here will receive on and off commands from the topleft touch part.",
-              "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het linksbovenste aanraak gedeelte."
+              "en": "Devices here will receive on and off commands from the left touch part.",
+              "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het linkse aanraak gedeelte."
             }
           },
           "3": {
             "hint": {
-              "en": "Devices here will receive dimming commands from the topleft touch part.",
-              "nl": "Apparaten hier zullen de dimmen commando's krijgen van het linksbovenste aanraak gedeelte."
+              "en": "Devices here will receive dimming commands from the left touch part.",
+              "nl": "Apparaten hier zullen de dimmen commando's krijgen van het linkse aanraak gedeelte."
             }
           },
           "4": {
             "hint": {
-              "en": "Devices here will receive on and off commands from the topright touch part.",
-              "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het rechtsbovenste aanraak gedeelte."
+              "en": "Devices here will receive on and off commands from the right touch part.",
+              "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het rechtse aanraak gedeelte."
             }
           },
           "5": {
             "hint": {
-              "en": "Devices here will receive dimming commands from the topright touch part.",
-              "nl": "Apparaten hier zullen de dimmen commando's krijgen van het rechtsbovenste aanraak gedeelte."
-            }
-          },
-          "6": {
-            "hint": {
-              "en": "Devices here will receive on and off commands from the bottomleft touch part.",
-              "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het linksonderste aanraak gedeelte."
-            }
-          },
-          "7": {
-            "hint": {
-              "en": "Devices here will receive dimming commands from the bottomleft touch part.",
-              "nl": "Apparaten hier zullen de dimmen commando's krijgen van het linksonderste aanraak gedeelte."
-            }
-          },
-          "8": {
-            "hint": {
-              "en": "Devices here will receive on and off commands from the bottomright touch part.",
-              "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het rechtsonderste aanraak gedeelte."
-            }
-          },
-          "9": {
-            "hint": {
-              "en": "Devices here will receive dimming commands from the bottomright touch part.",
-              "nl": "Apparaten hier zullen de dimmen commando's krijgen van het rechtsonderste aanraak gedeelte."
+              "en": "Devices here will receive dimming commands from the right touch part.",
+              "nl": "Apparaten hier zullen de dimmen commando's krijgen van het rechtse aanraak gedeelte."
             }
           }
         },
@@ -327,12 +275,12 @@
           "id": "touch_sound",
           "type": "checkbox",
           "label": {
-            "en": "Touch sound",
+            "en": "Touch sounds",
             "nl": "Aanraak geluid"
           },
           "hint": {
-            "en": "This parameter (1) determines whether or not the Wallmote Quad makes a sound when touched.",
-            "nl": "Deze parameter (1) bepaalt of de Wallmote Quad geluid maakt bij het aanraken."
+            "en": "This parameter (1) determines whether or not the Wallmote Duo makes a sound when touched.",
+            "nl": "Deze parameter (1) bepaalt of de Wallmote Duo geluid maakt bij het aanraken."
           },
           "zwave": {
             "index": 1,
@@ -345,11 +293,11 @@
           "type": "checkbox",
           "label": {
             "en": "Touch vibration",
-            "nl": "Aanraak trillen"
+            "nl": "Aanraak vibratie"
           },
           "hint": {
-            "en": "This parameter (2) determines whether or not the Wallmote Quad vibrates when touched.",
-            "nl": "Deze parameter (2) bepaalt of de Wallmote Quad trilt bij het aanraken."
+            "en": "This parameter (2) determines whether or not the Wallmote Duo vibrates when touched.",
+            "nl": "Deze parameter (2) bepaalt of de Wallmote Duo trilt bij het aanraken."
           },
           "zwave": {
             "index": 2,
@@ -367,7 +315,6 @@
           "hint": {
             "en": "This parameter (3) determines whether or not dimming on slide is enabled.",
             "nl": "Deze parameter (3) bepaalt of dimmen met swipen geactiveerd is."
-
           },
           "zwave": {
             "index": 3,
@@ -390,9 +337,9 @@
             "index": 39,
             "size": 1
           },
-          "value": 20,
+          "value": 5,
           "attr": {
-            "min": 10,
+            "min": 5,
             "max": 50
           }
         },
@@ -407,8 +354,8 @@
               "id": "rgb_name",
               "type": "dropdown",
               "label": {
-                "en": "Color name",
-                "nl": "Kleur naam"
+                "en": "Color Name",
+                "nl": "Kleur Naam"
               },
               "hint": {
                 "en": "This parameter (39) determines the colour of the LED when sending data. * = Unfortunately the LED can't be turned off completely, this is the most faint color.",
@@ -511,7 +458,7 @@
               },
               "hint": {
                 "en": "This parameter (39) determines the brightness level of the color.",
-                "nl": "Deze parameter (39) bepaalt de helderheid niveau van de kleur."
+                "nl": "Deze parameter (39) bepaalt de helderheidsniveau van de kleur."
               },
               "value": 100,
               "attr": {
@@ -528,7 +475,7 @@
               },
               "hint": {
                 "en": "This parameter (39) determines the red channel brightness.",
-                "nl": "Deze parameter (39) bepaalt de helderheid voor het rode kleur kanaal."
+                "nl": "Deze parameter (39) bepaalt de helderheid van het rode kleur kanaal."
               },
               "value": 0,
               "attr": {
@@ -545,7 +492,7 @@
               },
               "hint": {
                 "en": "This parameter (39) determines the green channel brightness.",
-                "nl": "Deze parameter (39) bepaalt de helderheid voor het groene kleur kanaal."
+                "nl": "Deze parameter (39) bepaalt de helderheid van het groene kleur kanaal."
               },
               "value": 0,
               "attr": {
@@ -562,7 +509,7 @@
               },
               "hint": {
                 "en": "This parameter (39) determines the blue channel brightness.",
-                "nl": "Deze parameter (39) bepaalt de helderheid voor het blauwe kleur kanaal."
+                "nl": "Deze parameter (39) bepaalt de helderheid van het blauwe kleur kanaal."
               },
               "value": 255,
               "attr": {
