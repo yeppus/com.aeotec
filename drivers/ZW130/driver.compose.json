@@ -27,7 +27,7 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
-        "en": "Secure inclusion: Double press the action button on the {{driverNameEn}}.Non-secure inclusion: Single press the action button on the {{driverNameEn}}",
+        "en": "Secure inclusion: Double press the action button on the {{driverNameEn}}. Non-secure inclusion: Single press the action button on the {{driverNameEn}}.",
         "nl": "Beveiligd toevoegen: Druk tweemaal op de actie knop op de {{driverNameNl}}. Onbeveiligd toevoegen: Druk eenmaal op de actie knop op de {{driverNameNl}}."
       }
     },

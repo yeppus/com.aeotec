@@ -136,11 +136,11 @@
         "id": "zw130_dim",
         "title": {
           "en": "Dim level was send",
-          "nl": "Dim niveau gezonden"
+          "nl": "Dim niveau verzonden"
         },
         "hint": {
           "en": "The dim level is send when you slide your finger over the wallmote. The brightness level will be the height you stopped at. (full height of the Wallmote Quad)",
-          "nl": "Het dim niveau wordt gezonden bij het schuiven van de vinger over de wallmote. Het helderheids niveau is de hoogte waar je stopt. (volle hoogte van de Wallmote Quad)"
+          "nl": "Het dim niveau wordt verzonden bij het schuiven van de vinger over de wallmote. Het helderheidsniveau is de hoogte waar je stopt. (volle hoogte van de Wallmote Quad)"
         },
         "tokens": [
           {
@@ -202,7 +202,7 @@
           "nl": "Batterij volledig opgeladen"
         },
         "hint": {
-          "en": "This card will only trigger if the device has been included as secure.",
+          "en": "This card will only trigger if the Wallmote Quad has been included as secure.",
           "nl": "Deze kaart zal alleen activeren als de Wallmote Quad beveiligd is toevoegd."
         },
         "args": [
@@ -245,7 +245,7 @@
         "learnmode": {
           "image": "/drivers/ZW130/assets/learnmode.svg",
           "instruction": {
-            "en": "Secure inclusion: Double press the action button on the Wallmote Quad.Non-secure inclusion: Single press the action button on the Wallmote Quad",
+            "en": "Secure inclusion: Double press the action button on the Wallmote Quad. Non-secure inclusion: Single press the action button on the Wallmote Quad.",
             "nl": "Beveiligd toevoegen: Druk tweemaal op de actie knop op de Wallmote Quad. Onbeveiligd toevoegen: Druk eenmaal op de actie knop op de Wallmote Quad."
           }
         },
