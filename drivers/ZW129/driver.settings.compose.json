@@ -186,7 +186,7 @@
         },
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines the brightness level of the color.",
-          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de helderheid niveau van de kleur."
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de helderheidsniveau van de kleur."
         },
         "value": 100,
         "attr": {
@@ -203,7 +203,7 @@
         },
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines the red channel brightness.",
-          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de helderheid voor het rode kleur kanaal."
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de helderheid van het rode kleur kanaal."
         },
         "value": 0,
         "attr": {
@@ -220,7 +220,7 @@
         },
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines the green channel brightness.",
-          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de helderheid voor het groene kleur kanaal."
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de helderheid van het groene kleur kanaal."
         },
         "value": 0,
         "attr": {
@@ -237,7 +237,7 @@
         },
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines the blue channel brightness.",
-          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de helderheid voor het blauwe kleur kanaal."
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de helderheid van het blauwe kleur kanaal."
         },
         "value": 255,
         "attr": {

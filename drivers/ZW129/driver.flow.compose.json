@@ -73,12 +73,12 @@
     {
       "id": "zw129_dim",
       "title": {
-        "en": "Dim level was send",
-        "nl": "Dim niveau gezonden"
+        "en": "Dim level has been sent",
+        "nl": "Het helderheidsniveau is verzonden"
       },
       "hint": {
-        "en": "The dim level is send when you slide your finger over the wallmote. The brightness level will be the height you stopped at. (full height of the {{driverNameEn}})",
-        "nl": "Het dim niveau word gezonden bij het schuiven van de vinger over de wallmote. Het helderheids niveau is de hoogte waar je stopt. (volle hoogte van de {{driverNameNl}})"
+        "en": "The dim level is send when you slide your finger over the {{driverNameEn}}. The brightness level will be the height you stopped at (full height of the {{driverNameEn}}).",
+        "nl": "Het helderheidsniveau word verzonden bij het schuiven van de vinger over de {{driverNameNl}}. Het helderheidsniveau is de hoogte waar je stopt (volle hoogte van de {{driverNameNl}})."
       },
       "tokens": [
         {
@@ -121,8 +121,8 @@
         "nl": "Batterij volledig opgeladen"
       },
       "hint": {
-        "en": "This card will only trigger if the device has been included as secure.",
-        "nl": "Deze kaart zal alleen activeren als de Wallmote beveiligd is toevoegd."
+        "en": "This card will only trigger if the {{driverNameEn}} has been included as secure.",
+        "nl": "Deze kaart zal alleen activeren als de {{driverNameNl}} beveiligd is toevoegd."
       },
       "args": []
     }

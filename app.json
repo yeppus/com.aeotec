@@ -121,12 +121,12 @@
       {
         "id": "zw129_dim",
         "title": {
-          "en": "Dim level was send",
-          "nl": "Dim niveau gezonden"
+          "en": "Dim level has been sent",
+          "nl": "Het helderheidsniveau is verzonden"
         },
         "hint": {
-          "en": "The dim level is send when you slide your finger over the wallmote. The brightness level will be the height you stopped at. (full height of the Wallmote Duo)",
-          "nl": "Het dim niveau word gezonden bij het schuiven van de vinger over de wallmote. Het helderheids niveau is de hoogte waar je stopt. (volle hoogte van de Wallmote Duo)"
+          "en": "The dim level is send when you slide your finger over the Wallmote Duo. The brightness level will be the height you stopped at (full height of the Wallmote Duo).",
+          "nl": "Het helderheidsniveau word verzonden bij het schuiven van de vinger over de Wallmote Duo. Het helderheidsniveau is de hoogte waar je stopt (volle hoogte van de Wallmote Duo)."
         },
         "tokens": [
           {
@@ -174,8 +174,8 @@
           "nl": "Batterij volledig opgeladen"
         },
         "hint": {
-          "en": "This card will only trigger if the device has been included as secure.",
-          "nl": "Deze kaart zal alleen activeren als de Wallmote beveiligd is toevoegd."
+          "en": "This card will only trigger if the Wallmote Duo has been included as secure.",
+          "nl": "Deze kaart zal alleen activeren als de Wallmote Duo beveiligd is toevoegd."
         },
         "args": [
           {
@@ -217,14 +217,14 @@
         "learnmode": {
           "image": "/drivers/ZW129/assets/learnmode.svg",
           "instruction": {
-            "en": "Secure inclusion: Double press the action button on the Wallmote Duo. Non-secure inclusion: Single press the action button on the Wallmote Duo",
+            "en": "Secure inclusion: Double press the action button on the Wallmote Duo. Non-secure inclusion: Single press the action button on the Wallmote Duo.",
             "nl": "Beveiligd toevoegen: Druk tweemaal op de actie knop op de Wallmote Duo. Onbeveiligd toevoegen: Druk eenmaal op de actie knop op de Wallmote Duo."
           }
         },
         "unlearnmode": {
           "instruction": {
-            "en": "Press the action button on the Wallmote Duo",
-            "nl": "Druk op de actie knop op de Wallmote Duo"
+            "en": "Press the action button on the Wallmote Duo.",
+            "nl": "Druk op de actie knop op de Wallmote Duo."
           }
         },
         "associationGroups": [
@@ -458,7 +458,7 @@
               },
               "hint": {
                 "en": "This parameter (39) determines the brightness level of the color.",
-                "nl": "Deze parameter (39) bepaalt de helderheid niveau van de kleur."
+                "nl": "Deze parameter (39) bepaalt de helderheidsniveau van de kleur."
               },
               "value": 100,
               "attr": {
@@ -475,7 +475,7 @@
               },
               "hint": {
                 "en": "This parameter (39) determines the red channel brightness.",
-                "nl": "Deze parameter (39) bepaalt de helderheid voor het rode kleur kanaal."
+                "nl": "Deze parameter (39) bepaalt de helderheid van het rode kleur kanaal."
               },
               "value": 0,
               "attr": {
@@ -492,7 +492,7 @@
               },
               "hint": {
                 "en": "This parameter (39) determines the green channel brightness.",
-                "nl": "Deze parameter (39) bepaalt de helderheid voor het groene kleur kanaal."
+                "nl": "Deze parameter (39) bepaalt de helderheid van het groene kleur kanaal."
               },
               "value": 0,
               "attr": {
@@ -509,7 +509,7 @@
               },
               "hint": {
                 "en": "This parameter (39) determines the blue channel brightness.",
-                "nl": "Deze parameter (39) bepaalt de helderheid voor het blauwe kleur kanaal."
+                "nl": "Deze parameter (39) bepaalt de helderheid van het blauwe kleur kanaal."
               },
               "value": 255,
               "attr": {
