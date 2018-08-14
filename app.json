@@ -367,6 +367,7 @@
           "hint": {
             "en": "This parameter (3) determines whether or not dimming on slide is enabled.",
             "nl": "Deze parameter (3) bepaalt of dimmen met swipen geactiveerd is."
+
           },
           "zwave": {
             "index": 3,
