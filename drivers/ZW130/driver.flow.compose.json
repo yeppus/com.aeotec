@@ -87,12 +87,12 @@
     {
       "id": "zw130_dim",
       "title": {
-        "en": "Dim level was send",
-        "nl": "Dim niveau verzonden"
+        "en": "Dim level has been sent",
+        "nl": "Het helderheidsniveau is verzonden"
       },
       "hint": {
         "en": "The dim level is send when you slide your finger over the wallmote. The brightness level will be the height you stopped at. (full height of the {{driverNameEn}})",
-        "nl": "Het dim niveau wordt verzonden bij het schuiven van de vinger over de wallmote. Het helderheidsniveau is de hoogte waar je stopt. (volle hoogte van de {{driverNameNl}})"
+        "nl": "Het helderheidsniveau wordt verzonden bij het schuiven van de vinger over de wallmote. Het helderheidsniveau is de hoogte waar je stopt. (volle hoogte van de {{driverNameNl}})"
       },
       "tokens": [
         {
