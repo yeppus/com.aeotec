@@ -25,7 +25,7 @@
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines which events trigger the acoustic alarm.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke geberutenissen het akoestische alarm af laten gaan."
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke gebeurtenissen het akoestische alarm af laten gaan."
     },
     "zwave": {
       "index": 87,

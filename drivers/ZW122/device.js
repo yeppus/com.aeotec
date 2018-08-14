@@ -2,7 +2,7 @@
 
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
-class AeotecWaterSensorSixDevice extends ZwaveDevice {
+class ZW122 extends ZwaveDevice {
 	
 	onMeshInit() {
 		this.registerCapability('measure_battery', 'BATTERY');
@@ -15,4 +15,4 @@ class AeotecWaterSensorSixDevice extends ZwaveDevice {
 	
 }
 
-module.exports = AeotecWaterSensorSixDevice;
+module.exports = ZW122;
