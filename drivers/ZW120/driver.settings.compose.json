@@ -3,10 +3,12 @@
     "id": "1",
     "value": true,
     "label": {
-      "en": "Which value of the Sensor Binary Report will be sent when the door is Opened/Closed."
+      "en": "Reported Sensor Binary values when opened/closed.",
+      "nl": "Gerapporteerde Sensor Binary waarde bij het openen/sluiten."
     },
     "hint": {
-      "en": "To set which value of the Sensor Binary Report will be sent when the door is Opened/Closed."
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what value will be sent in the Sensor Binary Report when the door is opened/closed.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke waarde er wordt verzonden in het Sensor Binary Report wanneer de deur opent/sluit."
     },
     "zwave": {
       "index": 1,
@@ -18,10 +20,12 @@
     "id": "111",
     "value": 0,
     "label": {
-      "en": "Set the interval time of battery report."
+      "en": "Report interval for battery reports.",
+      "nl": "Rapportage interval voor batterij rapporten."
     },
     "hint": {
-      "en": "Set the interval time of battery report.\r\nNote:\r\n1, if the value is less than 10, the time unit is second.\r\nIf the value is more than 10, the time unit is 4 minutes, which means if the value is more than 10 and less than 240, the interval time is 4 minutes. If the value is more than 240 and less than 480, the interval is 8 minutes.\r\n2, if the current battery report falls below the low battery value (configurable parameter 39), it will send battery report=0xFF.\r\n"
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the time interval between battery reports.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd tussen batterij rapportages."
     },
     "zwave": {
       "index": 111,
@@ -37,10 +41,12 @@
     "id": "121",
     "value": "256",
     "label": {
-      "en": "To configure which sensor report will be sent when the Sensor is triggered On/Off."
+      "en": "On/off report command",
+      "nl": "Rapport bij aan/uit"
     },
     "hint": {
-      "en": "To configure which sensor report will be sent when the Sensor is triggered On/Off."
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what report will be sent when the sensor is triggered on/off.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type rapport er wordt verzonden wanneer de sensor aan/uit geschakelt is."
     },
     "zwave": {
       "index": 121,
@@ -72,10 +78,12 @@
     "id": "2",
     "value": true,
     "label": {
-      "en": "Enable/disable wake up 10 minutes when re-power on the Sensor."
+      "en": "Enable 10 minute wake-up on re-power.",
+      "nl": "Schakel 10 minuten wakker zijn bij stroomherstel in."
     },
     "hint": {
-      "en": "Enable/disable wake up 10 minutes when re-power on the Sensor."
+      "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the device will stay awake for 10 minutes after re-power.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het apparaat na stroomherstel 10 minuten in wakker modus blijft."
     },
     "zwave": {
       "index": 2,
@@ -87,10 +95,12 @@
     "id": "255",
     "value": false,
     "label": {
-      "en": "Reset the Sensor."
+      "en": "Reset the sensor.",
+      "nl": "Reset de sensor."
     },
     "hint": {
-      "en": "Reset the Sensor."
+      "en": "This parameter ({{zwaveParameterIndex}}) triggers a reset of the sensor.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) veroorzaakt een reset van de sensor."
     },
     "zwave": {
       "index": 255,
@@ -102,10 +112,12 @@
     "id": "3",
     "value": true,
     "label": {
-      "en": "Which value of the Basic Set will be sent when the door is Opened/Closed. "
+      "en": "Reported Basic Set values when opened/closed.",
+      "nl": "Gerapporteerde Basic Set waarde bij het openen/sluiten."
     },
     "hint": {
-      "en": "To set which value of the Basic Set will be sent when the door is Opened/Closed. "
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what value will be sent in the Basic Set Report when the door is opened/closed.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke waarde er wordt verzonden in het Basic Set Report wanneer de deur opent/sluit."
     },
     "zwave": {
       "index": 3,
@@ -117,10 +129,12 @@
     "id": "39",
     "value": 10,
     "label": {
-      "en": "Set the low battery value."
+      "en": "Low battery value",
+      "nl": "Laag batterij niveau"
     },
     "hint": {
-      "en": "Set the low battery value.\r\n(10% to 50%).\r\n"
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the low battery value.",
+      "nl": "Deze parameter ({{zwaveParamtererIn dex}}) bepaalt het lage batterij niveau."
     },
     "zwave": {
       "index": 39,

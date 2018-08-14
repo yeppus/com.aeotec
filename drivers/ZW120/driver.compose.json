@@ -31,13 +31,6 @@
     },
     "associationGroups": [
       1
-    ],
-    "associationGroupsOptions": {
-      "1": {
-        "hint": {
-          "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate. The sensor binary report, basic set or notification report command can be sent in this group when the Sensor is triggered."
-        }
-      }
-    }
+    ]
   }
 }
