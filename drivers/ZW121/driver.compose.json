@@ -39,26 +39,13 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
-        "en": "Press the action button on the {{driverNameEn}} Controller. \n For secure pairing press the button twice.",
-        "nl": "Druk eenmaal op de actie knop op de {{driverNameNl}} Controller. \n Voor beveiligd koppelen drukt u tweemaal op de knop."
+        "en": "Press the action button on the {{driverNameEn}} Controller. For secure pairing press the button twice.",
+        "nl": "Druk eenmaal op de actie knop op de {{driverNameNl}} Controller. Voor beveiligd koppelen drukt u tweemaal op de knop."
       }
     },
     "associationGroups": [
+      1,
       2
-    ],
-    "associationGroupsOptions": {
-      "1": {
-        "hint": {
-          "en": "The association group 1 is the Z-Wave Lifeline group. The Hail CC and Basic Report CC (configurable) will be sent to the associated nodes.",
-          "nl": "De 1e associatie groep is de Z-Wave levenslijn groep. De Hail CC en Basic Report CC (configureerbaar) worden verzonden naar de apparaten in deze groep."
-        }
-      },
-      "2": {
-        "hint": {
-          "en": "Forwarding group for all commands sent to the {{driverNameEn}} by the main controller.",
-          "nl": "Doorstuur groep voor alle commando's verstuurd naar de {{driverNameNl}} door de main controller."
-        }
-      }
-    }
+    ]
   }
 }

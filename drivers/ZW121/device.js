@@ -3,7 +3,7 @@
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 const zwaveUtils = require('homey-meshdriver').Util;
 
-class AeotecLedStripDevice extends ZwaveDevice {
+class ZW121 extends ZwaveDevice {
 	
 	onMeshInit() {
 		this.registerCapability('onoff', 'BASIC');
@@ -77,4 +77,4 @@ class AeotecLedStripDevice extends ZwaveDevice {
 	}
 }
 
-module.exports = AeotecLedStripDevice;
+module.exports = ZW121;
