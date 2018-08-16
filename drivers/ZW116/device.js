@@ -2,7 +2,7 @@
 
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
-class AeotecNanoSwitchDevice extends ZwaveDevice {
+class ZW116 extends ZwaveDevice {
 	
 	onMeshInit() {
 		this.registerCapability('onoff', 'SWITCH_BINARY');
@@ -12,4 +12,4 @@ class AeotecNanoSwitchDevice extends ZwaveDevice {
 	
 }
 
-module.exports = AeotecNanoSwitchDevice;
+module.exports = ZW116;
