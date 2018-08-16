@@ -2,7 +2,7 @@
 
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
-class AeotecRangeExtenderSixDevice extends ZwaveDevice {
+class ZW117 extends ZwaveDevice {
 	
 	onMeshInit() {
 		this.registerSetting('82', value => new Buffer( [Number(!value)]))
@@ -10,4 +10,4 @@ class AeotecRangeExtenderSixDevice extends ZwaveDevice {
 	
 }
 
-module.exports = AeotecRangeExtenderSixDevice;
+module.exports = ZW117;

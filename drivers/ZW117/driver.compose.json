@@ -30,13 +30,6 @@
     },
     "associationGroups": [
       1
-    ],
-    "associationGroupsOptions": {
-      "1": {
-        "hint": {
-          "en": "The association group 1 is the Z-Wave Lifeline group. The Device Reset Locally Notification CC can be sent to the associated node in association group 1."
-        }
-      }
-    }
+    ]
   }
 }
