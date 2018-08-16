@@ -2,7 +2,7 @@
 
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
-class AeotecDoorSensorDevice extends ZwaveDevice {
+class ZW112 extends ZwaveDevice {
 	
 	onMeshInit() {
 		this.registerCapability('alarm_contact', 'BASIC');
@@ -11,4 +11,4 @@ class AeotecDoorSensorDevice extends ZwaveDevice {
 	
 }
 
-module.exports = AeotecDoorSensorDevice;
+module.exports = ZW112;
