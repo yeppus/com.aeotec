@@ -41,13 +41,6 @@
       3,
       4
     ],
-    "associationGroupsOptions": {
-      "1": {
-        "hint": {
-          "en": "Z-Wave Plus Lifeline.\r\nWhen the load state of Nano Dimmer (on/off/dim the load ) is changed, the Hail CC, Switch Multilevel Report and Basic Report (configured by parameter 80) can be sent to the associated nodes in this group."
-        }
-      }
-    },
     "defaultConfiguration": [
       {
         "id": 80,
