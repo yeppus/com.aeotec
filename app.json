@@ -41,153 +41,708 @@
       }
     ]
   },
-  "flow": {
-    "triggers": [
-      {
-        "id": "zw129_scene",
-        "title": {
-          "en": "Scene is activated",
-          "nl": "Scene is geactiveerd"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ZW129"
-          },
-          {
-            "name": "button",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Left",
-                  "nl": "Links"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Right",
-                  "nl": "Rechts"
-                }
-              }
-            ]
-          },
-          {
-            "name": "scene",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "Key Pressed 1 time",
-                "label": {
-                  "en": "Pressed 1x",
-                  "nl": "1x gedrukt"
-                }
-              },
-              {
-                "id": "Key Held Down",
-                "label": {
-                  "en": "Hold press (5x a second)",
-                  "nl": "Lang drukken (5x per seconde)"
-                }
-              },
-              {
-                "id": "Key Released",
-                "label": {
-                  "en": "Press released",
-                  "nl": "Drukken losgelaten"
-                }
-              },
-              {
-                "id": "Key Slide Up",
-                "label": {
-                  "en": "Slide up",
-                  "nl": "Omhoog schuiven"
-                }
-              },
-              {
-                "id": "Key Slide Down",
-                "label": {
-                  "en": "Slide down",
-                  "nl": "Omlaag schuiven"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "zw129_dim",
-        "title": {
-          "en": "Dim level has been sent",
-          "nl": "Het helderheidsniveau is verzonden"
-        },
-        "hint": {
-          "en": "The dim level is send when you slide your finger over the Wallmote Duo. The brightness level will be the height you stopped at (full height of the Wallmote Duo).",
-          "nl": "Het helderheidsniveau word verzonden bij het schuiven van de vinger over de Wallmote Duo. Het helderheidsniveau is de hoogte waar je stopt (volle hoogte van de Wallmote Duo)."
-        },
-        "tokens": [
-          {
-            "name": "dim",
-            "type": "number",
-            "title": {
-              "en": "level",
-              "nl": "niveau"
-            },
-            "example": 0.5
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ZW129"
-          },
-          {
-            "name": "button",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Left",
-                  "nl": "Links"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Right",
-                  "nl": "Rechts"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "zw129_battery_full",
-        "title": {
-          "en": "Battery fully charged",
-          "nl": "Batterij volledig opgeladen"
-        },
-        "hint": {
-          "en": "This card will only trigger if the Wallmote Duo has been included as secure.",
-          "nl": "Deze kaart zal alleen activeren als de Wallmote Duo beveiligd is toevoegd."
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ZW129"
-          }
-        ]
-      }
-    ]
-  },
   "drivers": [
+    {
+      "id": "ZW120",
+      "name": {
+        "en": "Door/Window Sensor Gen5"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "alarm_tamper",
+        "alarm_contact"
+      ],
+      "images": {
+        "large": "/drivers/ZW120/assets/images/large.png",
+        "small": "/drivers/ZW120/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          2
+        ],
+        "productId": [
+          120
+        ],
+        "zwaveAllianceProductId": 1579,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1579/Door Window Sensor Gen5 manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "Press the action button on the Door/Window Sensor Gen5.",
+            "nl": "Druk op de actie knop op de Door/Window Sensor Gen5."
+          }
+        },
+        "associationGroups": [
+          1
+        ]
+      },
+      "settings": [
+        {
+          "id": "1",
+          "value": true,
+          "label": {
+            "en": "Reported Sensor Binary values when opened/closed.",
+            "nl": "Gerapporteerde Sensor Binary waarde bij het openen/sluiten."
+          },
+          "hint": {
+            "en": "This parameter (1) determines what value will be sent in the Sensor Binary report when the door is opened/closed.",
+            "nl": "Deze parameter (1) bepaalt welke waarde er wordt verzonden in het Sensor Binary report wanneer de deur opent/sluit."
+          },
+          "zwave": {
+            "index": 1,
+            "size": 1
+          },
+          "type": "checkbox"
+        },
+        {
+          "id": "111",
+          "value": 0,
+          "label": {
+            "en": "Report interval for battery reports.",
+            "nl": "Rapportage interval voor batterijniveau."
+          },
+          "hint": {
+            "en": "This parameter (111) determines the time interval between battery reports.",
+            "nl": "Deze parameter (111) bepaalt de tijd tussen batterij rapportages."
+          },
+          "zwave": {
+            "index": 111,
+            "size": 4
+          },
+          "attr": {
+            "min": 0,
+            "max": 2147483647
+          },
+          "type": "number"
+        },
+        {
+          "id": "121",
+          "value": "256",
+          "label": {
+            "en": "On/off report command",
+            "nl": "Report bij aan/uit"
+          },
+          "hint": {
+            "en": "This parameter (121) determines what report will be sent when the sensor is triggered on/off.",
+            "nl": "Deze parameter (121) bepaalt welk type report er wordt verzonden wanneer de sensor aan/uit geschakelt is."
+          },
+          "zwave": {
+            "index": 121,
+            "size": 4
+          },
+          "values": [
+            {
+              "id": "16",
+              "label": {
+                "en": "Basic Set CC is selected."
+              }
+            },
+            {
+              "id": "256",
+              "label": {
+                "en": "Sensor Binary report CC is selected."
+              }
+            },
+            {
+              "id": "272",
+              "label": {
+                "en": "Basic Set CC and Sensor Binary report CC are selected."
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "2",
+          "value": true,
+          "label": {
+            "en": "Enable 10 minute wake-up on re-power.",
+            "nl": "Schakel 10 minuten wakker zijn bij stroomherstel in."
+          },
+          "hint": {
+            "en": "This parameter (2) determines whether or not the device will stay awake for 10 minutes after re-power.",
+            "nl": "Deze parameter (2) bepaalt of het apparaat na stroomherstel 10 minuten in wakker modus blijft."
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "type": "checkbox"
+        },
+        {
+          "id": "255",
+          "value": false,
+          "label": {
+            "en": "Reset the sensor.",
+            "nl": "Reset de sensor."
+          },
+          "hint": {
+            "en": "This parameter (255) triggers a reset of the sensor.",
+            "nl": "Deze parameter (255) veroorzaakt een reset van de sensor."
+          },
+          "zwave": {
+            "index": 255,
+            "size": 4
+          },
+          "type": "checkbox"
+        },
+        {
+          "id": "3",
+          "value": true,
+          "label": {
+            "en": "Reported Basic Set values when opened/closed.",
+            "nl": "Gerapporteerde Basic Set waarde bij het openen/sluiten."
+          },
+          "hint": {
+            "en": "This parameter (3) determines what value will be sent in the Basic Set report when the door is opened/closed.",
+            "nl": "Deze parameter (3) bepaalt welke waarde er wordt verzonden in het Basic Set report wanneer de deur opent/sluit."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "type": "checkbox"
+        },
+        {
+          "id": "39",
+          "value": 10,
+          "label": {
+            "en": "Low battery value",
+            "nl": "Laag batterij niveau"
+          },
+          "hint": {
+            "en": "This parameter (39) determines the low battery value.",
+            "nl": "Deze parameter ({{zwaveParamtererIn dex}}) bepaalt het lage batterij niveau."
+          },
+          "zwave": {
+            "index": 39,
+            "size": 1
+          },
+          "attr": {
+            "min": 10,
+            "max": 50
+          },
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "id": "ZW121",
+      "name": {
+        "en": "LED Strip"
+      },
+      "class": "light",
+      "capabilities": [
+        "light_saturation",
+        "light_temperature",
+        "dim",
+        "light_hue",
+        "light_mode",
+        "onoff"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        },
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "images": {
+        "large": "/drivers/ZW121/assets/images/large.png",
+        "small": "/drivers/ZW121/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          121
+        ],
+        "zwaveAllianceProductId": 2000,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2000/LED Strip manual.pdf",
+        "learnmode": {
+          "image": "/drivers/ZW121/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the action button on the LED Strip Controller. For secure pairing press the button twice.",
+            "nl": "Druk eenmaal op de actie knop op de LED Strip Controller. Voor beveiligd koppelen drukt u tweemaal op de knop."
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ]
+      },
+      "settings": [
+        {
+          "id": "power_off_state_recovery",
+          "type": "dropdown",
+          "label": {
+            "en": "State recovery after power loss",
+            "nl": "Status herstel na stroomuitval"
+          },
+          "hint": {
+            "en": "This parameter (20) determines the behaviour of the LED Strip after power loss.",
+            "nl": "Deze parameter (20) bepaalt het gedrag van de LED Strip na stroomuitval."
+          },
+          "zwave": {
+            "index": 20,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Recover last state before power loss",
+                "nl": "Herstel de laatste status voor de stroomuitval"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Always turn on",
+                "nl": "Altijd aan"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Always turn off",
+                "nl": "Altijd uit"
+              }
+            }
+          ]
+        },
+        {
+          "id": "report_color_change",
+          "type": "checkbox",
+          "label": {
+            "en": "Report color change",
+            "nl": "Rapporteer kleurverandering"
+          },
+          "hint": {
+            "en": "This parameter (32) determines whether or not the LED Strip reports color changes.",
+            "nl": "Deze parameter (32) bepaalt of de LED Strip zijn kleurveranderingen rapporteerd."
+          },
+          "zwave": {
+            "index": 32,
+            "size": 1
+          },
+          "value": false
+        },
+        {
+          "id": "color_switch_last_brightness",
+          "type": "checkbox",
+          "label": {
+            "en": "Set last brightness level on color switch",
+            "nl": "Zet het laatste helderheids niveau op kleurverandering"
+          },
+          "hint": {
+            "en": "This parameter (34) determines whether or not the LED Strip turns to it's last brightness setting when receiving the Color Switch Set Command.",
+            "nl": "Deze parameter (34) bepaalt of de LED Strip het laatste helderheidsniveau instelt bij het ontvangen van een Color Switch Set commando."
+          },
+          "zwave": {
+            "index": 34,
+            "size": 1
+          },
+          "value": false
+        },
+        {
+          "id": "white_display_mode",
+          "type": "dropdown",
+          "label": {
+            "en": "Cold/warm white display mode",
+            "nl": "Koud/warm wit weergave modus"
+          },
+          "hint": {
+            "en": "This parameter (35) determines the display mode for displaying cold or warm white.",
+            "nl": "Deze parameter (35) bepaalt de weergave modus voor het koude en warme witte licht."
+          },
+          "zwave": {
+            "index": 35,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Arbitrary combination of cold and warm light",
+                "nl": "Arbitraire combinatie tussen koud en warm licht"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Complementary combination of cold and warm light",
+                "nl": "Complementaire combinatie tussen koud en warm licht"
+              }
+            }
+          ]
+        },
+        {
+          "id": "colorful_mode",
+          "type": "dropdown",
+          "label": {
+            "en": "Standard color animations",
+            "nl": "Standaard geanimeerde kleuren"
+          },
+          "hint": {
+            "en": "This parameter (40) sets the LED Strip to display one of the standard color animations.",
+            "nl": "Deze parameter (40) laat de LED Strip een van de standaard animaties weergeven."
+          },
+          "zwave": {
+            "index": 40,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "None, turned off",
+                "nl": "Geen, uitgeschakeld"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Rainbow mode",
+                "nl": "Regenboog modus"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Multi color mode",
+                "nl": "Multi color modus"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Blink red",
+                "nl": "Knipperend rood"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Blink green",
+                "nl": "Knipperend groen"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Blink blue",
+                "nl": "Knipperend blauw"
+              }
+            }
+          ]
+        },
+        {
+          "id": "state_change_reports",
+          "type": "dropdown",
+          "label": {
+            "en": "Notifications to association group 1",
+            "nl": "Notificaties richting assocatie groep 1"
+          },
+          "hint": {
+            "en": "This parameter (80) determines the notification command class used for notifications to the 1st association group.",
+            "nl": "Deze parameter (80) bepaalt welke command class er wordt gebruikt voor notificaties richting de 1ste associatie groep."
+          },
+          "zwave": {
+            "index": 80,
+            "size": 1
+          },
+          "value": "3",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled, none sent",
+                "nl": "Uitgeschakelt, er wordt niets verstuurd"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Hail command",
+                "nl": "Hail commando"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Basic command",
+                "nl": "Basic commando"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Hail command on action button press",
+                "nl": "Hail commando bij indrukken van de actie knop"
+              }
+            }
+          ]
+        },
+        {
+          "id": "dimmer_mode",
+          "type": "dropdown",
+          "label": {
+            "en": "Set the Dimmer mode",
+            "nl": "Stel de dim modus in"
+          },
+          "hint": {
+            "en": "This parameter (112) determines the dimmer mode for the LED Strip",
+            "nl": "Deze parameter (112) bepaalt de dim modus voor de LED Strip"
+          },
+          "zwave": {
+            "index": 112,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Parabolic curve",
+                "nl": "Prabolische curve"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Index curve",
+                "nl": "Index curve"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "(Parabolic + Index)/2",
+                "nl": "(Parabolisch + index)/2"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Linear",
+                "nl": "Lineair"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZW122",
+      "name": {
+        "en": "Water Sensor 6"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "alarm_water",
+        "measure_temperature",
+        "alarm_tamper"
+      ],
+      "images": {
+        "large": "/drivers/ZW122/assets/images/large.png",
+        "small": "/drivers/ZW122/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          2
+        ],
+        "productId": [
+          120
+        ],
+        "zwaveAllianceProductId": 1579,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1579/Door Window Sensor Gen5 manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "Press the action button on the Water Sensor 6.",
+            "nl": "Druk op de actie knop op de Water Sensor 6."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 64,
+            "size": 1,
+            "value": 0
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "86",
+          "type": "checkbox",
+          "label": {
+            "en": "Enable the acoustic alarm",
+            "nl": "Schakel het akoestische alarm in"
+          },
+          "hint": {
+            "en": "This parameter (86) determines whether or not the acoustic alarm is enabled.",
+            "nl": "Deze parameter (86) bepaalt of het akoestische alarm ingeschakeld is."
+          },
+          "zwave": {
+            "index": 86,
+            "size": 1
+          },
+          "value": true
+        },
+        {
+          "id": "87",
+          "type": "dropdown",
+          "label": {
+            "en": "Acoustic alarm triggers",
+            "nl": "Triggers voor het akoestische alarm"
+          },
+          "hint": {
+            "en": "This parameter (87) determines which events trigger the acoustic alarm.",
+            "nl": "Deze parameter (87) bepaalt welke gebeurtenissen het akoestische alarm af laten gaan."
+          },
+          "zwave": {
+            "index": 87,
+            "size": 4
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "On water leakage",
+                "nl": "Wanneer er water lekt"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "On device vibration",
+                "nl": "Wanneer het apparaat geschud wordt"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "On device tilt",
+                "nl": "Wanneer het apparaat gekanteld wordt"
+              }
+            },
+            {
+              "id": "16",
+              "label": {
+                "en": "On temperature too low",
+                "nl": "Wanneer het apparaat te koud is"
+              }
+            },
+            {
+              "id": "32",
+              "label": {
+                "en": "On temperature too high",
+                "nl": "Wanneer het apparaat te warm is"
+              }
+            }
+          ],
+          "value": "1"
+        },
+        {
+          "id": "111",
+          "type": "number",
+          "label": {
+            "en": "Interval between reports",
+            "nl": "Rapportage interval"
+          },
+          "hint": {
+            "en": "This parameter (111) determines the time between reports to associated devices.",
+            "nl": "Deze parameter (111) bepaalt de tijd tussen rapportages naar geassocieerde apparaten."
+          },
+          "zwave": {
+            "index": 111,
+            "size": 4
+          },
+          "attr": {
+            "min": 5,
+            "max": 2678400
+          },
+          "value": 5
+        },
+        {
+          "id": "201",
+          "type": "number",
+          "label": {
+            "en": "Temperature sensor calibration",
+            "nl": "Kalibratie temperatuursensor"
+          },
+          "hint": {
+            "en": "This parameter (201) determines the value added to the measured temperature to get to an accurate reading.",
+            "nl": "Deze parameter (201) bepaalt de waarde die wordt opgeteld bij de gemeten waarde om tot een correcte meting uit te komen."
+          },
+          "zwave": {
+            "index": 201,
+            "size": 2
+          },
+          "attr": {
+            "min": -128,
+            "max": 127
+          },
+          "value": 0
+        },
+        {
+          "id": "50",
+          "type": "number",
+          "label": {
+            "en": "Low temperature threshold",
+            "nl": "Drempel lage temperatuur"
+          },
+          "hint": {
+            "en": "This parameter (50) determines the temperature below which the low temperature alarm will be triggered.",
+            "nl": "Deze parameter (50) bepaalt de temperatuur waaronder het lage temperatuur alarm afgaat."
+          },
+          "zwave": {
+            "index": 50,
+            "size": 4
+          },
+          "attr": {
+            "min": 0,
+            "max": 2147483647
+          },
+          "value": 0
+        },
+        {
+          "id": "49",
+          "type": "number",
+          "label": {
+            "en": "High temperature threshold",
+            "nl": "Drempel hoge temperatuur"
+          },
+          "hint": {
+            "en": "This parameter (49) determines the temperature above which the high temperature alarm will be triggered.",
+            "nl": "Deze parameter (49) bepaalt de temperatuur waarboven het hoge temperatuur alarm afgaat."
+          },
+          "zwave": {
+            "index": 49,
+            "size": 4
+          },
+          "attr": {
+            "min": 0,
+            "max": 2147483647
+          },
+          "value": 0
+        }
+      ]
+    },
     {
       "id": "ZW129",
       "name": {
@@ -520,6 +1075,941 @@
           ]
         }
       ]
+    },
+    {
+      "id": "ZW130",
+      "name": {
+        "en": "Wallmote Quad"
+      },
+      "class": "button",
+      "capabilities": [
+        "measure_battery",
+        "alarm_battery"
+      ],
+      "images": {
+        "large": "/drivers/ZW130/assets/images/large.png",
+        "small": "/drivers/ZW130/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          2,
+          258,
+          513
+        ],
+        "productId": [
+          130
+        ],
+        "zwaveAllianceProductId": 2153,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2153/Aeon Labs WallMote Quad manual.pdf",
+        "learnmode": {
+          "image": "/drivers/ZW130/assets/learnmode.svg",
+          "instruction": {
+            "en": "Secure inclusion: Double press the action button on the Wallmote Quad. Non-secure inclusion: Single press the action button on the Wallmote Quad.",
+            "nl": "Beveiligd toevoegen: Druk tweemaal op de actie knop op de Wallmote Quad. Onbeveiligd toevoegen: Druk eenmaal op de actie knop op de Wallmote Quad."
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "Press the action button on the Wallmote Quad",
+            "nl": "Druk op de actie knop op de Wallmote Quad"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "This is the Z-Wave Lifeline group, it is not recommended to change this.",
+              "nl": "Dit is de Z-Wave Lifeline groep, het is niet aangeraden deze te veranderen."
+            }
+          },
+          "2": {
+            "hint": {
+              "en": "Devices here will receive on and off commands from the topleft touch part.",
+              "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het linksbovenste aanraak gedeelte."
+            }
+          },
+          "3": {
+            "hint": {
+              "en": "Devices here will receive dimming commands from the topleft touch part.",
+              "nl": "Apparaten hier zullen de dimmen commando's krijgen van het linksbovenste aanraak gedeelte."
+            }
+          },
+          "4": {
+            "hint": {
+              "en": "Devices here will receive on and off commands from the topright touch part.",
+              "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het rechtsbovenste aanraak gedeelte."
+            }
+          },
+          "5": {
+            "hint": {
+              "en": "Devices here will receive dimming commands from the topright touch part.",
+              "nl": "Apparaten hier zullen de dimmen commando's krijgen van het rechtsbovenste aanraak gedeelte."
+            }
+          },
+          "6": {
+            "hint": {
+              "en": "Devices here will receive on and off commands from the bottomleft touch part.",
+              "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het linksonderste aanraak gedeelte."
+            }
+          },
+          "7": {
+            "hint": {
+              "en": "Devices here will receive dimming commands from the bottomleft touch part.",
+              "nl": "Apparaten hier zullen de dimmen commando's krijgen van het linksonderste aanraak gedeelte."
+            }
+          },
+          "8": {
+            "hint": {
+              "en": "Devices here will receive on and off commands from the bottomright touch part.",
+              "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het rechtsonderste aanraak gedeelte."
+            }
+          },
+          "9": {
+            "hint": {
+              "en": "Devices here will receive dimming commands from the bottomright touch part.",
+              "nl": "Apparaten hier zullen de dimmen commando's krijgen van het rechtsonderste aanraak gedeelte."
+            }
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 4,
+            "size": 1,
+            "value": 3
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "touch_sound",
+          "type": "checkbox",
+          "label": {
+            "en": "Touch sound",
+            "nl": "Aanraak geluid"
+          },
+          "hint": {
+            "en": "This parameter (1) determines whether or not the Wallmote Quad makes a sound when touched.",
+            "nl": "Deze parameter (1) bepaalt of de Wallmote Quad geluid maakt bij het aanraken."
+          },
+          "zwave": {
+            "index": 1,
+            "size": 1
+          },
+          "value": true
+        },
+        {
+          "id": "touch_vibration",
+          "type": "checkbox",
+          "label": {
+            "en": "Touch vibration",
+            "nl": "Aanraak trillen"
+          },
+          "hint": {
+            "en": "This parameter (2) determines whether or not the Wallmote Quad vibrates when touched.",
+            "nl": "Deze parameter (2) bepaalt of de Wallmote Quad trilt bij het aanraken."
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "value": true
+        },
+        {
+          "id": "slide_function",
+          "type": "checkbox",
+          "label": {
+            "en": "Slide dimming function",
+            "nl": "Swipe dim functie"
+          },
+          "hint": {
+            "en": "This parameter (3) determines whether or not dimming on slide is enabled.",
+            "nl": "Deze parameter (3) bepaalt of dimmen met swipen geactiveerd is."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "value": true
+        },
+        {
+          "id": "low_battery",
+          "type": "number",
+          "label": {
+            "en": "Low battery level",
+            "nl": "Laag batterij niveau"
+          },
+          "hint": {
+            "en": "This parameter (39) determines the percentage of battery value to at which the low battery alarm will go off.",
+            "nl": "Deze parameter (39) bepaalt hoe laag het batterijpercentage moet zijn om het alarm af te laten gaan."
+          },
+          "zwave": {
+            "index": 39,
+            "size": 1
+          },
+          "value": 20,
+          "attr": {
+            "min": 10,
+            "max": 50
+          }
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "LED color when sending data",
+            "nl": "LED kleur bij verzenden data"
+          },
+          "children": [
+            {
+              "id": "rgb_name",
+              "type": "dropdown",
+              "label": {
+                "en": "Color name",
+                "nl": "Kleur naam"
+              },
+              "hint": {
+                "en": "This parameter (39) determines the colour of the LED when sending data. * = Unfortunately the LED can't be turned off completely, this is the most faint color.",
+                "nl": "Deze parameter (39) bepaalt de kleur van de LED wanneer er data verstuurd wordt. * = Helaas kan de LED niet volledig uitgezet worden, dit is de minst felle kleur."
+              },
+              "value": "0,0,255",
+              "values": [
+                {
+                  "id": "1,1,1",
+                  "label": {
+                    "en": "Off *",
+                    "nl": "Uit *"
+                  }
+                },
+                {
+                  "id": "255,0,0",
+                  "label": {
+                    "en": "Red",
+                    "nl": "Rood"
+                  }
+                },
+                {
+                  "id": "255,127,0",
+                  "label": {
+                    "en": "Orange",
+                    "nl": "Oranje"
+                  }
+                },
+                {
+                  "id": "255,255,0",
+                  "label": {
+                    "en": "Yellow",
+                    "nl": "Geel"
+                  }
+                },
+                {
+                  "id": "0,255,0",
+                  "label": {
+                    "en": "Green",
+                    "nl": "Groen"
+                  }
+                },
+                {
+                  "id": "0,255,255",
+                  "label": {
+                    "en": "Turquise",
+                    "nl": "Turkoois"
+                  }
+                },
+                {
+                  "id": "0,127,255",
+                  "label": {
+                    "en": "Cyan",
+                    "nl": "Cyaan"
+                  }
+                },
+                {
+                  "id": "0,0,255",
+                  "label": {
+                    "en": "Blue",
+                    "nl": "Blauw"
+                  }
+                },
+                {
+                  "id": "255,0,255",
+                  "label": {
+                    "en": "Pink",
+                    "nl": "Roze"
+                  }
+                },
+                {
+                  "id": "64,0,255",
+                  "label": {
+                    "en": "Purple",
+                    "nl": "Paars"
+                  }
+                },
+                {
+                  "id": "255,255,255",
+                  "label": {
+                    "en": "White",
+                    "nl": "Wit"
+                  }
+                },
+                {
+                  "id": "custom",
+                  "label": {
+                    "en": "Custom",
+                    "nl": "Aangepast"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rgb_name_level",
+              "type": "number",
+              "label": {
+                "en": "Brightness namecolor",
+                "nl": "Helderheid naamkleur"
+              },
+              "hint": {
+                "en": "This parameter (39) determines the brightness level of the color.",
+                "nl": "Deze parameter (39) bepaalt de helderheid niveau van de kleur."
+              },
+              "value": 100,
+              "attr": {
+                "min": 0,
+                "max": 100
+              }
+            },
+            {
+              "id": "rgb_r",
+              "type": "number",
+              "label": {
+                "en": "Red",
+                "nl": "Rood"
+              },
+              "hint": {
+                "en": "This parameter (39) determines the red channel brightness.",
+                "nl": "Deze parameter (39) bepaalt de helderheid voor het rode kleur kanaal."
+              },
+              "value": 0,
+              "attr": {
+                "min": 0,
+                "max": 255
+              }
+            },
+            {
+              "id": "rgb_g",
+              "type": "number",
+              "label": {
+                "en": "Green",
+                "nl": "Groen"
+              },
+              "hint": {
+                "en": "This parameter (39) determines the green channel brightness.",
+                "nl": "Deze parameter (39) bepaalt de helderheid voor het groene kleur kanaal."
+              },
+              "value": 0,
+              "attr": {
+                "min": 0,
+                "max": 255
+              }
+            },
+            {
+              "id": "rgb_b",
+              "type": "number",
+              "label": {
+                "en": "Blue",
+                "nl": "Blauw"
+              },
+              "hint": {
+                "en": "This parameter (39) determines the blue channel brightness.",
+                "nl": "Deze parameter (39) bepaalt de helderheid voor het blauwe kleur kanaal."
+              },
+              "value": 255,
+              "attr": {
+                "min": 0,
+                "max": 255
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZW139-C",
+      "name": {
+        "en": "Nano Switch (ZW139)"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/ZW139-C/assets/images/large.png",
+        "small": "/drivers/ZW139-C/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          139
+        ],
+        "zwaveAllianceProductId": 2320,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2320/Nano Switch manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "Press the action button on the back of the Nano Switch (ZW139).",
+            "nl": "Druk op de actie knop op de achterkant van de Nano Switch (ZW139)."
+          }
+        },
+        "associationGroups": [
+          1,
+          3,
+          4
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline.\r\nWhen the load state of Nano Switch (turn on/off the load) is changed, the Hail CC and Basic Report (configured by parameter 80) can be sent to the associated nodes in this group."
+            }
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "value": 3,
+            "size": 1
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 30
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "20",
+          "type": "dropdown",
+          "label": {
+            "en": "Default behaviour after re-power",
+            "nl": "Standaard gedrag na stroomonderbreking"
+          },
+          "hint": {
+            "en": "This parameter (20) determines the behaviour after power was disconnected.",
+            "nl": "Deze parameter (20) bepaalt het gedrag nadat de stroomtoevoer is verbroken."
+          },
+          "zwave": {
+            "index": 20,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Status before re-power",
+                "nl": "Status voor stroomonderbreking"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Always on",
+                "nl": "Altijd aan"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Always off",
+                "nl": "Altijd uit"
+              }
+            }
+          ]
+        },
+        {
+          "id": "81",
+          "type": "dropdown",
+          "label": {
+            "en": "Reports to association group 3",
+            "nl": "Updates naar associatie groep 3"
+          },
+          "hint": {
+            "en": "This parameter (81) determines what reports are sent to association group 3.",
+            "nl": "Deze parameter (81) bepaalt welke updates er worden verzonden naar associatie groep 3."
+          },
+          "zwave": {
+            "index": 81,
+            "size": 1
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Niets"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Basic Set",
+                "nl": "Basic Set"
+              }
+            }
+          ]
+        },
+        {
+          "id": "82",
+          "type": "dropdown",
+          "label": {
+            "en": "Reports to association group 4",
+            "nl": "Updates naar associatie groep 4"
+          },
+          "hint": {
+            "en": "This parameter (82) determines what reports are sent to association group 4.",
+            "nl": "Deze parameter (82) bepaalt welke updates er worden verzonden naar associatie groep 4."
+          },
+          "zwave": {
+            "index": 82,
+            "size": 1
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Niets"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Basic Set",
+                "nl": "Basic Set"
+              }
+            }
+          ]
+        },
+        {
+          "id": "120",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 1",
+            "nl": "Schakelaar type input 1"
+          },
+          "hint": {
+            "en": "This parameter (120) determines what type of input is connected to input 1.",
+            "nl": "Deze parameter (120) bepaalt welk type input apparaat er is verbonden aan input 1."
+          },
+          "zwave": {
+            "index": 120,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            }
+          ]
+        },
+        {
+          "id": "121",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 2",
+            "nl": "Schakelaar type input 2"
+          },
+          "hint": {
+            "en": "This parameter (121) determines what type of input is connected to input 2.",
+            "nl": "Deze parameter (121) bepaalt welk type input apparaat er is verbonden aan input 2."
+          },
+          "zwave": {
+            "index": 121,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            }
+          ]
+        }
+      ]
     }
-  ]
+  ],
+  "flow": {
+    "triggers": [
+      {
+        "id": "zw129_scene",
+        "title": {
+          "en": "Scene is activated",
+          "nl": "Scene is geactiveerd"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW129"
+          },
+          {
+            "name": "button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Left",
+                  "nl": "Links"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Right",
+                  "nl": "Rechts"
+                }
+              }
+            ]
+          },
+          {
+            "name": "scene",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "Key Pressed 1 time",
+                "label": {
+                  "en": "Pressed 1x",
+                  "nl": "1x gedrukt"
+                }
+              },
+              {
+                "id": "Key Held Down",
+                "label": {
+                  "en": "Hold press (5x a second)",
+                  "nl": "Lang drukken (5x per seconde)"
+                }
+              },
+              {
+                "id": "Key Released",
+                "label": {
+                  "en": "Press released",
+                  "nl": "Drukken losgelaten"
+                }
+              },
+              {
+                "id": "Key Slide Up",
+                "label": {
+                  "en": "Slide up",
+                  "nl": "Omhoog schuiven"
+                }
+              },
+              {
+                "id": "Key Slide Down",
+                "label": {
+                  "en": "Slide down",
+                  "nl": "Omlaag schuiven"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "zw129_dim",
+        "title": {
+          "en": "Dim level has been sent",
+          "nl": "Het helderheidsniveau is verzonden"
+        },
+        "hint": {
+          "en": "The dim level is send when you slide your finger over the Wallmote Duo. The brightness level will be the height you stopped at (full height of the Wallmote Duo).",
+          "nl": "Het helderheidsniveau word verzonden bij het schuiven van de vinger over de Wallmote Duo. Het helderheidsniveau is de hoogte waar je stopt (volle hoogte van de Wallmote Duo)."
+        },
+        "tokens": [
+          {
+            "name": "dim",
+            "type": "number",
+            "title": {
+              "en": "level",
+              "nl": "niveau"
+            },
+            "example": 0.5
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW129"
+          },
+          {
+            "name": "button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Left",
+                  "nl": "Links"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Right",
+                  "nl": "Rechts"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "zw129_battery_full",
+        "title": {
+          "en": "Battery fully charged",
+          "nl": "Batterij volledig opgeladen"
+        },
+        "hint": {
+          "en": "This card will only trigger if the Wallmote Duo has been included as secure.",
+          "nl": "Deze kaart zal alleen activeren als de Wallmote Duo beveiligd is toevoegd."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW129"
+          }
+        ]
+      },
+      {
+        "id": "zw130_scene",
+        "title": {
+          "en": "Scene is activated",
+          "nl": "Scene is geactiveerd"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW130"
+          },
+          {
+            "name": "button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Top left",
+                  "nl": "Links boven"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Top right",
+                  "nl": "Rechts boven"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Bottom left",
+                  "nl": "Links onder"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Bottom right",
+                  "nl": "Rechts onder"
+                }
+              }
+            ]
+          },
+          {
+            "name": "scene",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "Key Pressed 1 time",
+                "label": {
+                  "en": "Pressed 1x",
+                  "nl": "1x gedrukt"
+                }
+              },
+              {
+                "id": "Key Held Down",
+                "label": {
+                  "en": "Hold press (5x a second)",
+                  "nl": "Lang drukken (5x per seconde)"
+                }
+              },
+              {
+                "id": "Key Released",
+                "label": {
+                  "en": "Press released",
+                  "nl": "Drukken losgelaten"
+                }
+              },
+              {
+                "id": "Key Slide Up",
+                "label": {
+                  "en": "Slide Up",
+                  "nl": "Omhoog Schuiven"
+                }
+              },
+              {
+                "id": "Key Slide Down",
+                "label": {
+                  "en": "Slide Down",
+                  "nl": "Omlaag schuiven"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "zw130_dim",
+        "title": {
+          "en": "Dim level has been sent",
+          "nl": "Het helderheidsniveau is verzonden"
+        },
+        "hint": {
+          "en": "The dim level is send when you slide your finger over the wallmote. The brightness level will be the height you stopped at (full height of the Wallmote Quad).",
+          "nl": "Het helderheidsniveau wordt verzonden bij het schuiven van de vinger over de wallmote. Het helderheidsniveau is de hoogte waar je stopt (volle hoogte van de Wallmote Quad)."
+        },
+        "tokens": [
+          {
+            "name": "dim",
+            "type": "number",
+            "title": {
+              "en": "level",
+              "nl": "niveau"
+            },
+            "example": 0.5
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW130"
+          },
+          {
+            "name": "button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Top left",
+                  "nl": "Links boven"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Top right",
+                  "nl": "Rechts boven"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Bottom left",
+                  "nl": "Links onder"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Bottom right",
+                  "nl": "Rechts onder"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "zw130_battery_full",
+        "title": {
+          "en": "Battery fully charged",
+          "nl": "Batterij volledig opgeladen"
+        },
+        "hint": {
+          "en": "This card will only trigger if the Wallmote Quad has been included as secure.",
+          "nl": "Deze kaart zal alleen activeren als de Wallmote Quad beveiligd is toevoegd."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW130"
+          }
+        ]
+      }
+    ]
+  }
 }
