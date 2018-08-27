@@ -135,7 +135,7 @@
   },
   {
     "id": "49",
-    "type": "",
+    "type": "number",
     "label": {
       "en": "High temperature threshold",
       "nl": "Drempel hoge temperatuur"
