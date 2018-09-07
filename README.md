@@ -4,6 +4,17 @@ This app adds support for Aeotec devices in Homey.
 
 ### Changelog:
 
+**2.0.0**
+* WARNING: Preview release, this might be unstable
+
+
+* App now fully implemented in SDK2
+* Added the following devices
+  - Water sensor 6
+  - Heavy duty smart switch 5
+  - Wallmote duo
+  - LED strip
+
 **1.6.5**
 * Fixed support for DSB45
 
