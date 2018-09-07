@@ -664,8 +664,8 @@
         "measure_temperature"
       ],
       "images": {
-        "large": "/drivers/DSB05/assets/images/large.png",
-        "small": "/drivers/DSB05/assets/images/small.png"
+        "large": "/drivers/DSB05/assets/images/large.jpg",
+        "small": "/drivers/DSB05/assets/images/small.jpg"
       },
       "zwave": {
         "manufacturerId": 134,
@@ -1118,8 +1118,8 @@
         "locked"
       ],
       "images": {
-        "large": "/drivers/ZW062/assets/images/large.png",
-        "small": "/drivers/ZW062/assets/images/small.png"
+        "large": "/drivers/ZW062/assets/images/large.jpg",
+        "small": "/drivers/ZW062/assets/images/small.jpg"
       },
       "zwave": {
         "manufacturerId": 134,
@@ -1595,8 +1595,8 @@
         "measure_temperature"
       ],
       "images": {
-        "large": "/drivers/ZW074/assets/images/large.png",
-        "small": "/drivers/ZW074/assets/images/small.png"
+        "large": "/drivers/ZW074/assets/images/large.jpg",
+        "small": "/drivers/ZW074/assets/images/small.jpg"
       },
       "zwave": {
         "manufacturerId": 134,
@@ -2681,8 +2681,8 @@
         "onoff"
       ],
       "images": {
-        "large": "/drivers/ZW080/assets/images/large.png",
-        "small": "/drivers/ZW080/assets/images/small.png"
+        "large": "/drivers/ZW080/assets/images/large.jpg",
+        "small": "/drivers/ZW080/assets/images/small.jpg"
       },
       "zwave": {
         "manufacturerId": 134,
