@@ -42,119 +42,35 @@
     ]
   },
   "flow": {
-    "actions": [
-      {
-        "id": "ZW080-turn_alarm_on",
-        "title": {
-          "en": "Turn siren on",
-          "nl": "Zet sirene aan"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ZW080"
-          }
-        ]
-      },
-      {
-        "id": "ZW080-turn_alarm_off",
-        "title": {
-          "en": "Turn siren off",
-          "nl": "Zet sirene uit"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ZW080"
-          }
-        ]
-      },
-      {
-        "id": "ZW080-set_alarm",
-        "title": {
-          "en": "Set alarm sound",
-          "nl": "Zet alarm geluid"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ZW080"
-          },
-          {
-            "name": "sound",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "256",
-                "label": {
-                  "en": "Sound 1",
-                  "nl": "Geluid 1"
-                }
-              },
-              {
-                "id": "512",
-                "label": {
-                  "en": "Sound 2",
-                  "nl": "Geluid 2"
-                }
-              },
-              {
-                "id": "768",
-                "label": {
-                  "en": "Sound 3",
-                  "nl": "Geluid 3"
-                }
-              },
-              {
-                "id": "1024",
-                "label": {
-                  "en": "Sound 4",
-                  "nl": "Geluid 4"
-                }
-              },
-              {
-                "id": "1280",
-                "label": {
-                  "en": "Sound 5",
-                  "nl": "Geluid 5"
-                }
-              }
-            ]
-          },
-          {
-            "name": "volume",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Low volume",
-                  "nl": "Laag volume"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Middle volume",
-                  "nl": "Middel volume"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "High volume",
-                  "nl": "Hoog volume"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    ],
     "triggers": [
+      {
+        "id": "dsa38_press_1",
+        "title": {
+          "en": "The button has been short pressed",
+          "nl": "De knop is kort ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=DSA38"
+          }
+        ]
+      },
+      {
+        "id": "dsa38_hold_1",
+        "title": {
+          "en": "The button has been long pressed",
+          "nl": "De knop is lang ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=DSA38"
+          }
+        ]
+      },
       {
         "id": "zw088_press_1",
         "title": {
@@ -579,9 +495,2181 @@
           }
         ]
       }
+    ],
+    "actions": [
+      {
+        "id": "ZW080-turn_alarm_on",
+        "title": {
+          "en": "Turn siren on",
+          "nl": "Zet sirene aan"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW080"
+          }
+        ]
+      },
+      {
+        "id": "ZW080-turn_alarm_off",
+        "title": {
+          "en": "Turn siren off",
+          "nl": "Zet sirene uit"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW080"
+          }
+        ]
+      },
+      {
+        "id": "ZW080-set_alarm",
+        "title": {
+          "en": "Set alarm sound",
+          "nl": "Zet alarm geluid"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW080"
+          },
+          {
+            "name": "sound",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "256",
+                "label": {
+                  "en": "Sound 1",
+                  "nl": "Geluid 1"
+                }
+              },
+              {
+                "id": "512",
+                "label": {
+                  "en": "Sound 2",
+                  "nl": "Geluid 2"
+                }
+              },
+              {
+                "id": "768",
+                "label": {
+                  "en": "Sound 3",
+                  "nl": "Geluid 3"
+                }
+              },
+              {
+                "id": "1024",
+                "label": {
+                  "en": "Sound 4",
+                  "nl": "Geluid 4"
+                }
+              },
+              {
+                "id": "1280",
+                "label": {
+                  "en": "Sound 5",
+                  "nl": "Geluid 5"
+                }
+              }
+            ]
+          },
+          {
+            "name": "volume",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Low volume",
+                  "nl": "Laag volume"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Middle volume",
+                  "nl": "Middel volume"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "High volume",
+                  "nl": "Hoog volume"
+                }
+              }
+            ]
+          }
+        ]
+      }
     ]
   },
   "drivers": [
+    {
+      "id": "DSA38",
+      "name": {
+        "en": "Panic Button"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery"
+      ],
+      "images": {
+        "large": "/drivers/DSA38/assets/images/large.png",
+        "small": "/drivers/DSA38/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          1
+        ],
+        "productId": [
+          38
+        ],
+        "zwaveAllianceProductId": 1284,
+        "learnmode": {
+          "instruction": {
+            "en": "Press the \"Learn\" button on the Panic Button.",
+            "nl": "Druk de \"Learn\" knop op de Panic Button in."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 250,
+            "size": 1,
+            "value": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "DSB05",
+      "name": {
+        "en": "Multisensor 4-in-1"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "measure_humidity",
+        "measure_luminance",
+        "alarm_motion",
+        "measure_temperature"
+      ],
+      "images": {
+        "large": "/drivers/DSB05/assets/images/large.png",
+        "small": "/drivers/DSB05/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          2
+        ],
+        "productId": [
+          5
+        ],
+        "zwaveAllianceProductId": 763,
+        "learnmode": {
+          "image": "/drivers/DSB05/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the action button on the Multisensor 4-in-1",
+            "nl": "Druk op de actie knop van de Multisensor 4-in-1"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 101,
+            "size": 4,
+            "value": 225
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "2",
+          "type": "checkbox",
+          "label": {
+            "en": "Wake up for 10 minutes when batteries are inserted",
+            "nl": "Maak wakker voor 10 minuten nadat batterijen zijn ingevoegd"
+          },
+          "hint": {
+            "en": "This parameter (2) determines whether or not the device wakes up for 10 minutes when batteries are inserted.",
+            "nl": "Deze parameter (2) bepaalt of het apparaat 10 minuten wakker blijft wanneer er batterijen worden geplaatst."
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "value": false
+        },
+        {
+          "id": "3",
+          "type": "number",
+          "label": {
+            "en": "No motion detection timeout",
+            "nl": "Geen beweging gedetecteerd na"
+          },
+          "hint": {
+            "en": "This parameter (3) determines for how long the motion detection alarm will stay on after detection.",
+            "nl": "Deze parameter (3) bepaatl voor hoe lang het bewegingsalarm actief blijft nadat er beweging is gedetecteerd."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 2
+          },
+          "attr": {
+            "min": 1,
+            "max": 15300
+          },
+          "value": 240
+        },
+        {
+          "id": "4",
+          "type": "checkbox",
+          "label": {
+            "en": "Enable motion sensor",
+            "nl": "Schakel bewegingsdetectie in"
+          },
+          "hint": {
+            "en": "This parameter (4) determines whether or not the device detects motion.",
+            "nl": "Deze parameter (4) bepaalt of het apparaat beweging detecteert."
+          },
+          "zwave": {
+            "index": 4,
+            "size": 1
+          },
+          "value": true
+        },
+        {
+          "id": "102",
+          "type": "dropdown",
+          "label": {
+            "en": "Information reports send to association group 2",
+            "nl": "Informatie updates naar associatie groep 2"
+          },
+          "hint": {
+            "en": "This parameter (102) determines what information is sent to the devices in association group 2.",
+            "nl": "Deze parameter (102) bepaalt welke informatie er wordt verstuurd naar de apparaten in de 2e associatie groep."
+          },
+          "zwave": {
+            "index": 102,
+            "size": 4
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Geen"
+              }
+            },
+            {
+              "id": "33",
+              "label": {
+                "en": "Battery and temperature",
+                "nl": "Batterij en temperatuur"
+              }
+            },
+            {
+              "id": "65",
+              "label": {
+                "en": "Battery and luminosity",
+                "nl": "Batterij en lichtsterkte"
+              }
+            },
+            {
+              "id": "129",
+              "label": {
+                "en": "Battery and humidity",
+                "nl": "Batterij en vochtigheidsgraad"
+              }
+            },
+            {
+              "id": "97",
+              "label": {
+                "en": "Battery, temperature and luminosity",
+                "nl": "Batterij, temperatuur, en lichtsterkte"
+              }
+            },
+            {
+              "id": "161",
+              "label": {
+                "en": "Battery, temperature and humidity",
+                "nl": "Batterij, temperatuur en vochtigheidsgraad"
+              }
+            },
+            {
+              "id": "193",
+              "label": {
+                "en": "Battery, luminosity and humidity",
+                "nl": "Batterij, lichtsterkte en vochtigheidsgraad"
+              }
+            },
+            {
+              "id": "225",
+              "label": {
+                "en": "Battery, temperature, luminosity and humidity",
+                "nl": "Batterij, temperatuur, lichtsterkte en vochtigheidsgraad"
+              }
+            }
+          ]
+        },
+        {
+          "id": "103",
+          "type": "dropdown",
+          "label": {
+            "en": "Information reports send to association group 3",
+            "nl": "Informatie updates naar associatie groep 3"
+          },
+          "hint": {
+            "en": "This parameter (103) determines what information is sent to the devices in association group 3.",
+            "nl": "Deze parameter (103) bepaalt welke informatie er wordt verstuurd naar de apparaten in de 3e associatie groep."
+          },
+          "zwave": {
+            "index": 103,
+            "size": 4
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Geen"
+              }
+            },
+            {
+              "id": "33",
+              "label": {
+                "en": "Battery and temperature",
+                "nl": "Batterij en temperatuur"
+              }
+            },
+            {
+              "id": "65",
+              "label": {
+                "en": "Battery and luminosity",
+                "nl": "Batterij en lichtsterkte"
+              }
+            },
+            {
+              "id": "129",
+              "label": {
+                "en": "Battery and humidity",
+                "nl": "Batterij en vochtigheidsgraad"
+              }
+            },
+            {
+              "id": "97",
+              "label": {
+                "en": "Battery, temperature and luminosity",
+                "nl": "Batterij, temperatuur, en lichtsterkte"
+              }
+            },
+            {
+              "id": "161",
+              "label": {
+                "en": "Battery, temperature and humidity",
+                "nl": "Batterij, temperatuur en vochtigheidsgraad"
+              }
+            },
+            {
+              "id": "193",
+              "label": {
+                "en": "Battery, luminosity and humidity",
+                "nl": "Batterij, lichtsterkte en vochtigheidsgraad"
+              }
+            },
+            {
+              "id": "225",
+              "label": {
+                "en": "Battery, temperature, luminosity and humidity",
+                "nl": "Batterij, temperatuur, lichtsterkte en vochtigheidsgraad"
+              }
+            }
+          ]
+        },
+        {
+          "id": "111",
+          "type": "number",
+          "label": {
+            "en": "Reporting interval association group 1",
+            "nl": "Informatie update interval associatie groep 1"
+          },
+          "hint": {
+            "en": "This parameter (111) determines the interval between reports to Homey.",
+            "nl": "Deze parameter (111) bepaalt de tijd tussen rapportages naar Homey."
+          },
+          "zwave": {
+            "index": 111,
+            "size": 4
+          },
+          "attr": {
+            "min": 1,
+            "max": 2678400
+          },
+          "value": 30
+        },
+        {
+          "id": "112",
+          "type": "number",
+          "label": {
+            "en": "Reporting interval association group 2",
+            "nl": "Informatie update interval associatie groep 2"
+          },
+          "hint": {
+            "en": "This parameter (112) determines the interval between reports to devices in association group 2.",
+            "nl": "Deze parameter (112) bepaalt de tijd tussen rapportages naar apparaten in de 2e associatie groep."
+          },
+          "zwave": {
+            "index": 112,
+            "size": 4
+          },
+          "attr": {
+            "min": 1,
+            "max": 2678400
+          },
+          "value": 720
+        },
+        {
+          "id": "113",
+          "type": "number",
+          "label": {
+            "en": "Reporting interval association group 3",
+            "nl": "Informatie update interval associatie groep 3"
+          },
+          "hint": {
+            "en": "This parameter (113) determines the interval between reports to devices in association group 3.",
+            "nl": "Deze parameter (113) bepaalt de tijd tussen rapportages naar apparaten in de 3e associatie groep."
+          },
+          "zwave": {
+            "index": 113,
+            "size": 4
+          },
+          "attr": {
+            "min": 1,
+            "max": 2678400
+          },
+          "value": 720
+        }
+      ]
+    },
+    {
+      "id": "DSB45",
+      "name": {
+        "en": "Water Sensor"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "alarm_water"
+      ],
+      "images": {
+        "large": "/drivers/DSB45/assets/images/large.png",
+        "small": "/drivers/DSB45/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          2
+        ],
+        "productId": [
+          45
+        ],
+        "learnmode": {
+          "image": "/drivers/DSB45/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the action button on the Water Sensor",
+            "nl": "Druk op de actie knop op de Water Sensor"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 121,
+            "size": 4,
+            "value": 299
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "1",
+          "type": "radio",
+          "label": {
+            "en": "Operation mode",
+            "nl": "Werking"
+          },
+          "hint": {
+            "en": "This parameter (1) determines whether the alarm goes off when water is detected or when no water is detected.",
+            "nl": "Deze parameter (1) bepaalt of het alarm afgaat als er water gedetecteert wordt of wanneer er geen water gedetecteert wordt."
+          },
+          "zwave": {
+            "index": 1,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Warn when water detected",
+                "nl": "Waarschuw als er water gedetecteert wordt"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Warn when no water detected",
+                "nl": "Waarschuw als er geen water gedetecteert wordt"
+              }
+            }
+          ]
+        },
+        {
+          "id": "121",
+          "type": "dropdown",
+          "label": {
+            "en": "Information to send",
+            "nl": "Te versturen informatie"
+          },
+          "hint": {
+            "en": "This parameter (121) determines what kind of report will be sent to the associated nodes when the Water Sensor detects water.",
+            "nl": "Deze parameter (121) bepaalt wat voor soort rapport er wordt verzonder naar de geassocieerde apparaten wanneer de Water Sensor water detecteert."
+          },
+          "zwave": {
+            "index": 121,
+            "size": 4
+          },
+          "value": "299",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Niets"
+              }
+            },
+            {
+              "id": "298",
+              "label": {
+                "en": "Water detect",
+                "nl": "Water detectie"
+              }
+            },
+            {
+              "id": "299",
+              "label": {
+                "en": "Water detect and battery",
+                "nl": "Water detectie and batterij"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DSD37",
+      "name": {
+        "en": "Repeater"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": 4,
+        "productId": 37,
+        "learnmode": {
+          "image": "/drivers/DSD37/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button on your Repeater",
+            "nl": "Druk op de knop van de Repeater"
+          }
+        },
+        "associationGroups": [
+          1
+        ]
+      },
+      "class": "other",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/DSD37/assets/images/large.png",
+        "small": "/drivers/DSD37/assets/images/small.png"
+      }
+    },
+    {
+      "id": "ZW062",
+      "name": {
+        "en": "Garage Door Controller Gen5"
+      },
+      "class": "lock",
+      "capabilities": [
+        "locked"
+      ],
+      "images": {
+        "large": "/drivers/ZW062/assets/images/large.png",
+        "small": "/drivers/ZW062/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          62
+        ],
+        "zwaveAllianceProductId": 1497,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1497/Aeon Labs Garage Door Controller Gen5 manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "Press the action button on the Garage Door Controller Gen5",
+            "nl": "Druk op de actie knop op de Garage Door Controller Gen5"
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate.\nWhen the Garage Door controller is received the commands sent by controller to be turned on or off, the Garage Door controller will send a basic report of its status to the nodes in association group 1. To change what kind of signal is sent to the nodes in group 1, please see the detailed description of configuration parameter 80."
+            }
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 32,
+            "value": 0,
+            "size": 1
+          },
+          {
+            "id": 80,
+            "value": 2,
+            "size": 1
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "32",
+          "type": "checkbox",
+          "label": {
+            "en": "Enable the start-up ringtone",
+            "nl": "Laat ringtone horen bij opstarten"
+          },
+          "hint": {
+            "en": "This parameter (32) determines whether or not the device plays a ringtone on start-up.",
+            "nl": "Deze parameter (32) bepaalt of het apparaat een ringtone afspeeld bij het opstarten."
+          },
+          "zwave": {
+            "index": 32,
+            "size": 1
+          },
+          "value": false
+        },
+        {
+          "id": "34",
+          "type": "checkbox",
+          "label": {
+            "en": "Send calibration command on save",
+            "nl": "Stuur kalibratie commando bij het opslaan"
+          },
+          "hint": {
+            "en": "This parameter (34) commands the device to start the calibration procedure.",
+            "nl": "Deze parameter (34) zorgt dat het apparaat het kalibratie process start."
+          },
+          "zwave": {
+            "index": 34,
+            "size": 1
+          },
+          "value": false
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Alarm mode - opening",
+            "nl": "Alarm modus - openen"
+          },
+          "children": [
+            {
+              "id": "371",
+              "type": "number",
+              "label": {
+                "en": "LED blink frequency",
+                "nl": "LED knipper snelheid"
+              },
+              "hint": {
+                "en": "This parameter (371) determines the blinking frequency of the LED light.",
+                "nl": "Deze parameter (371) bepaalt de snelheid van het knipperen van de LED."
+              },
+              "zwave": {
+                "index": 371,
+                "size": 4
+              },
+              "attr": {
+                "min": 1,
+                "max": 10
+              },
+              "value": 10
+            },
+            {
+              "id": "372",
+              "type": "number",
+              "label": {
+                "en": "Sound number",
+                "nl": "Geluid nummer"
+              },
+              "hint": {
+                "en": "This parameter (372) determines the sound played when the alarm goes off.",
+                "nl": "Deze parameter (372) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
+              },
+              "zwave": {
+                "index": 372,
+                "size": 4
+              },
+              "attr": {
+                "min": 1
+              },
+              "value": 1
+            },
+            {
+              "id": "373",
+              "type": "number",
+              "label": {
+                "en": "Sound volume",
+                "nl": "Volume"
+              },
+              "hint": {
+                "en": "This parameter (373) determines the volume of the alarm.",
+                "nl": "Deze parameter (373) bepaalt het volume van het alarm."
+              },
+              "zwave": {
+                "index": 373,
+                "size": 4
+              },
+              "attr": {
+                "min": 1,
+                "max": 10
+              },
+              "value": 8
+            },
+            {
+              "id": "374",
+              "type": "checkbox",
+              "label": {
+                "en": "Alarm enabled",
+                "nl": "Alarm aan"
+              },
+              "hint": {
+                "en": "This parameter (374) determines whether or not the alarm is enabled.",
+                "nl": "Deze parameter (374) bepaalt of het alarm aan staat."
+              },
+              "zwave": {
+                "index": 374,
+                "size": 4
+              },
+              "value": true
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Alarm mode - closing",
+            "nl": "Alarm modus - sluiten"
+          },
+          "children": [
+            {
+              "id": "381",
+              "type": "number",
+              "label": {
+                "en": "LED blink frequency",
+                "nl": "LED knipper snelheid"
+              },
+              "hint": {
+                "en": "This parameter (381) determines the blinking frequency of the LED light.",
+                "nl": "Deze parameter (381) bepaalt de snelheid van het knipperen van de LED."
+              },
+              "zwave": {
+                "index": 381,
+                "size": 1
+              },
+              "attr": {
+                "min": 1,
+                "max": 10
+              },
+              "value": 6
+            },
+            {
+              "id": "382",
+              "type": "number",
+              "label": {
+                "en": "Sound number",
+                "nl": "Geluid nummer"
+              },
+              "hint": {
+                "en": "This parameter (382) determines the sound played when the alarm goes off.",
+                "nl": "Deze parameter (382) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
+              },
+              "zwave": {
+                "index": 382,
+                "size": 1
+              },
+              "attr": {
+                "min": 1
+              },
+              "value": 2
+            },
+            {
+              "id": "383",
+              "type": "number",
+              "label": {
+                "en": "Sound volume",
+                "nl": "Volume"
+              },
+              "hint": {
+                "en": "This parameter (383) determines the volume of the alarm.",
+                "nl": "Deze parameter (383) bepaalt het volume van het alarm."
+              },
+              "zwave": {
+                "index": 383,
+                "size": 1
+              },
+              "attr": {
+                "min": 1,
+                "max": 10
+              },
+              "value": 8
+            },
+            {
+              "id": "384",
+              "type": "checkbox",
+              "label": {
+                "en": "Alarm enabled",
+                "nl": "Alarm aan"
+              },
+              "hint": {
+                "en": "This parameter (384) determines whether or not the alarm is enabled.",
+                "nl": "Deze parameter (384) bepaalt of het alarm aan staat."
+              },
+              "zwave": {
+                "index": 384,
+                "size": 1
+              },
+              "value": true
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Alarm mode - unknown",
+            "nl": "Alarm modus - onbekend"
+          },
+          "children": [
+            {
+              "id": "391",
+              "type": "number",
+              "label": {
+                "en": "LED blink frequency",
+                "nl": "LED knipper snelheid"
+              },
+              "hint": {
+                "en": "This parameter (391) determines the blinking frequency of the LED light.",
+                "nl": "Deze parameter (391) bepaalt de snelheid van het knipperen van de LED."
+              },
+              "zwave": {
+                "index": 391,
+                "size": 1
+              },
+              "attr": {
+                "min": 1,
+                "max": 10
+              },
+              "value": 4
+            },
+            {
+              "id": "392",
+              "type": "number",
+              "label": {
+                "en": "Sound number",
+                "nl": "Geluid nummer"
+              },
+              "hint": {
+                "en": "This parameter (392) determines the sound played when the alarm goes off.",
+                "nl": "Deze parameter (392) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
+              },
+              "zwave": {
+                "index": 392,
+                "size": 1
+              },
+              "attr": {
+                "min": 1
+              },
+              "value": 3
+            },
+            {
+              "id": "393",
+              "type": "number",
+              "label": {
+                "en": "Sound volume",
+                "nl": "Volume"
+              },
+              "hint": {
+                "en": "This parameter (393) determines the volume of the alarm.",
+                "nl": "Deze parameter (393) bepaalt het volume van het alarm."
+              },
+              "zwave": {
+                "index": 393,
+                "size": 1
+              },
+              "attr": {
+                "min": 1,
+                "max": 10
+              },
+              "value": 8
+            },
+            {
+              "id": "394",
+              "type": "checkbox",
+              "label": {
+                "en": "Alarm enabled",
+                "nl": "Alarm aan"
+              },
+              "hint": {
+                "en": "This parameter (394) determines whether or not the alarm is enabled.",
+                "nl": "Deze parameter (394) bepaalt of het alarm aan staat."
+              },
+              "zwave": {
+                "index": 394,
+                "size": 1
+              },
+              "value": false
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Alarm mode - closed",
+            "nl": "Alarm modus - gesloten"
+          },
+          "children": [
+            {
+              "id": "401",
+              "type": "number",
+              "label": {
+                "en": "LED blink frequency",
+                "nl": "LED knipper snelheid"
+              },
+              "hint": {
+                "en": "This parameter (391) determines the blinking frequency of the LED light.",
+                "nl": "Deze parameter (391) bepaalt de snelheid van het knipperen van de LED."
+              },
+              "zwave": {
+                "index": 391,
+                "size": 1
+              },
+              "attr": {
+                "min": 1,
+                "max": 10
+              },
+              "value": 2
+            },
+            {
+              "id": "402",
+              "type": "number",
+              "label": {
+                "en": "Sound number",
+                "nl": "Geluid nummer"
+              },
+              "hint": {
+                "en": "This parameter (402) determines the sound played when the alarm goes off.",
+                "nl": "Deze parameter (402) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
+              },
+              "zwave": {
+                "index": 402,
+                "size": 1
+              },
+              "attr": {
+                "min": 1
+              },
+              "value": 4
+            },
+            {
+              "id": "403",
+              "type": "number",
+              "label": {
+                "en": "Sound volume",
+                "nl": "Volume"
+              },
+              "hint": {
+                "en": "This parameter (403) determines the volume of the alarm.",
+                "nl": "Deze parameter (403) bepaalt het volume van het alarm."
+              },
+              "zwave": {
+                "index": 403,
+                "size": 1
+              },
+              "attr": {
+                "min": 1,
+                "max": 10
+              },
+              "value": 8
+            },
+            {
+              "id": "404",
+              "type": "checkbox",
+              "label": {
+                "en": "Alarm enabled",
+                "nl": "Alarm aan"
+              },
+              "hint": {
+                "en": "This parameter (404) determines whether or not the alarm is enabled.",
+                "nl": "Deze parameter (404) bepaalt of het alarm aan staat."
+              },
+              "zwave": {
+                "index": 404,
+                "size": 1
+              },
+              "value": false
+            }
+          ]
+        },
+        {
+          "id": "80",
+          "type": "dropdown",
+          "label": {
+            "en": "Command send when state changed",
+            "nl": "Commando wanneer de status is veranderd"
+          },
+          "hint": {
+            "en": "This parameter (80) determines the command class used when the state of the device has changed.",
+            "nl": "Deze parameter (80) bepaalt de command class die gebruikt wordt wanneer de status van het apparaat is veranderd."
+          },
+          "zwave": {
+            "index": 80,
+            "size": 1
+          },
+          "value": "2",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Hail CC"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Barrier operator CC"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZW074",
+      "name": {
+        "en": "Multisensor 4-in-1 Gen5"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "measure_humidity",
+        "measure_luminance",
+        "alarm_motion",
+        "measure_temperature"
+      ],
+      "images": {
+        "large": "/drivers/ZW074/assets/images/large.png",
+        "small": "/drivers/ZW074/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          2,
+          514
+        ],
+        "productId": [
+          74
+        ],
+        "zwaveAllianceProductId": 1169,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1169/Instructions - MultiSensor Gen5 MCert1.pdf",
+        "learnmode": {
+          "image": "/drivers/ZW074/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the action button on the Multisensor 4-in-1 Gen5",
+            "nl": "Druk op de actie knop van de Multisensor 4-in-1 Gen5"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 5,
+            "size": 1,
+            "value": 2
+          },
+          {
+            "id": 28,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 41,
+            "size": 2,
+            "value": 1290
+          },
+          {
+            "id": 43,
+            "size": 2,
+            "value": 12800
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 300
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "3",
+          "type": "number",
+          "label": {
+            "en": "No motion detection timeout",
+            "nl": "Geen beweging gedetecteerd na"
+          },
+          "hint": {
+            "en": "This parameter (3) determines for how long the motion detection alarm will stay on after detection.",
+            "nl": "Deze parameter (3) bepaatl voor hoe lang het bewegingsalarm actief blijft nadat er beweging is gedetecteerd."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 2
+          },
+          "attr": {
+            "min": 1,
+            "max": 15300
+          },
+          "value": 240
+        },
+        {
+          "id": "4",
+          "type": "checkbox",
+          "label": {
+            "en": "Enable motion sensor",
+            "nl": "Schakel bewegingsdetectie in"
+          },
+          "hint": {
+            "en": "This parameter (4) determines whether or not the device detects motion.",
+            "nl": "Deze parameter (4) bepaalt of het apparaat beweging detecteert."
+          },
+          "zwave": {
+            "index": 4,
+            "size": 1
+          },
+          "value": true
+        },
+        {
+          "id": "40",
+          "type": "checkbox",
+          "label": {
+            "en": "Selective reporting",
+            "nl": "Selectieve updates"
+          },
+          "hint": {
+            "en": "This parameter (40) determines whether or not the sensor will only send updated values if the value change is bigger than the threshold.",
+            "nl": "Deze parameter (40) bepaalt of het apparaat alleen waardes zal doorgeven wanneer de waardeverandering groter is dan de drempel."
+          },
+          "zwave": {
+            "index": 40,
+            "size": 1
+          },
+          "value": true
+        },
+        {
+          "id": "41",
+          "type": "number",
+          "label": {
+            "en": "Temperature threshold",
+            "nl": "Temperatuur drempel"
+          },
+          "hint": {
+            "en": "This parameter (41) determines the reporting threshold for the temperature value.",
+            "nl": "Deze parameter (41) bepaalt de rapportage drempel voor de temperatuur waarde."
+          },
+          "zwave": {
+            "index": 41,
+            "size": 2
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 100
+          }
+        },
+        {
+          "id": "42",
+          "type": "number",
+          "label": {
+            "en": "Humidity threshold",
+            "nl": "Lucht vochtigheid drempel"
+          },
+          "hint": {
+            "en": "This parameter (42) determines the reporting threshold for the humidity value.",
+            "nl": "Deze parameter (42) bepaalt de rapportage drempel voor de vochtigheids waarde."
+          },
+          "zwave": {
+            "index": 42,
+            "size": 2
+          },
+          "value": 5,
+          "attr": {
+            "min": 0,
+            "max": 100
+          }
+        },
+        {
+          "id": "43",
+          "type": "number",
+          "label": {
+            "en": "Luminance threshold",
+            "nl": "Helderheid drempel"
+          },
+          "hint": {
+            "en": "This parameter (43) determines the reporting threshold for the luminance value.",
+            "nl": "Deze parameter (43) bepaalt de rapportage drempel voor de helderheids waarde."
+          },
+          "zwave": {
+            "index": 43,
+            "size": 2
+          },
+          "value": 50,
+          "attr": {
+            "min": 0,
+            "max": 255
+          }
+        },
+        {
+          "id": "44",
+          "type": "number",
+          "label": {
+            "en": "Battery level threshold",
+            "nl": "Batterij level drempel"
+          },
+          "hint": {
+            "en": "This parameter (44) determines the reporting threshold for the battery level.",
+            "nl": "Deze parameter (44) bepaalt de rapportage drempel voor het batterij percentage."
+          },
+          "zwave": {
+            "index": 44,
+            "size": 2
+          },
+          "value": 5,
+          "attr": {
+            "min": 0,
+            "max": 100
+          }
+        },
+        {
+          "id": "102",
+          "type": "dropdown",
+          "label": {
+            "en": "Information reports send to association group 2",
+            "nl": "Informatie updates naar associatie groep 2"
+          },
+          "hint": {
+            "en": "This parameter (102) determines what information is sent to the devices in association group 2.",
+            "nl": "Deze parameter (102) bepaalt welke informatie er wordt verstuurd naar de apparaten in de 2e associatie groep."
+          },
+          "zwave": {
+            "index": 102,
+            "size": 4
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Geen"
+              }
+            },
+            {
+              "id": "33",
+              "label": {
+                "en": "Battery and temperature",
+                "nl": "Batterij en temperatuur"
+              }
+            },
+            {
+              "id": "65",
+              "label": {
+                "en": "Battery and luminosity",
+                "nl": "Batterij en lichtsterkte"
+              }
+            },
+            {
+              "id": "129",
+              "label": {
+                "en": "Battery and humidity",
+                "nl": "Batterij en vochtigheidsgraad"
+              }
+            },
+            {
+              "id": "97",
+              "label": {
+                "en": "Battery, temperature and luminosity",
+                "nl": "Batterij, temperatuur, en lichtsterkte"
+              }
+            },
+            {
+              "id": "161",
+              "label": {
+                "en": "Battery, temperature and humidity",
+                "nl": "Batterij, temperatuur en vochtigheidsgraad"
+              }
+            },
+            {
+              "id": "193",
+              "label": {
+                "en": "Battery, luminosity and humidity",
+                "nl": "Batterij, lichtsterkte en vochtigheidsgraad"
+              }
+            },
+            {
+              "id": "225",
+              "label": {
+                "en": "Battery, temperature, luminosity and humidity",
+                "nl": "Batterij, temperatuur, lichtsterkte en vochtigheidsgraad"
+              }
+            }
+          ]
+        },
+        {
+          "id": "103",
+          "type": "dropdown",
+          "label": {
+            "en": "Information reports send to association group 3",
+            "nl": "Informatie updates naar associatie groep 3"
+          },
+          "hint": {
+            "en": "This parameter (103) determines what information is sent to the devices in association group 3.",
+            "nl": "Deze parameter (103) bepaalt welke informatie er wordt verstuurd naar de apparaten in de 3e associatie groep."
+          },
+          "zwave": {
+            "index": 103,
+            "size": 4
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Geen"
+              }
+            },
+            {
+              "id": "33",
+              "label": {
+                "en": "Battery and temperature",
+                "nl": "Batterij en temperatuur"
+              }
+            },
+            {
+              "id": "65",
+              "label": {
+                "en": "Battery and luminosity",
+                "nl": "Batterij en lichtsterkte"
+              }
+            },
+            {
+              "id": "129",
+              "label": {
+                "en": "Battery and humidity",
+                "nl": "Batterij en vochtigheidsgraad"
+              }
+            },
+            {
+              "id": "97",
+              "label": {
+                "en": "Battery, temperature and luminosity",
+                "nl": "Batterij, temperatuur, en lichtsterkte"
+              }
+            },
+            {
+              "id": "161",
+              "label": {
+                "en": "Battery, temperature and humidity",
+                "nl": "Batterij, temperatuur en vochtigheidsgraad"
+              }
+            },
+            {
+              "id": "193",
+              "label": {
+                "en": "Battery, luminosity and humidity",
+                "nl": "Batterij, lichtsterkte en vochtigheidsgraad"
+              }
+            },
+            {
+              "id": "225",
+              "label": {
+                "en": "Battery, temperature, luminosity and humidity",
+                "nl": "Batterij, temperatuur, lichtsterkte en vochtigheidsgraad"
+              }
+            }
+          ]
+        },
+        {
+          "id": "111",
+          "type": "number",
+          "label": {
+            "en": "Reporting interval association group 1",
+            "nl": "Informatie update interval associatie groep 1"
+          },
+          "hint": {
+            "en": "This parameter (111) determines the interval between reports to Homey.",
+            "nl": "Deze parameter (111) bepaalt de tijd tussen rapportages naar Homey."
+          },
+          "zwave": {
+            "index": 111,
+            "size": 4
+          },
+          "attr": {
+            "min": 1,
+            "max": 2678400
+          },
+          "value": 300
+        },
+        {
+          "id": "112",
+          "type": "number",
+          "label": {
+            "en": "Reporting interval association group 2",
+            "nl": "Informatie update interval associatie groep 2"
+          },
+          "hint": {
+            "en": "This parameter (112) determines the interval between reports to devices in association group 2.",
+            "nl": "Deze parameter (112) bepaalt de tijd tussen rapportages naar apparaten in de 2e associatie groep."
+          },
+          "zwave": {
+            "index": 112,
+            "size": 4
+          },
+          "attr": {
+            "min": 1,
+            "max": 2678400
+          },
+          "value": 1800
+        },
+        {
+          "id": "113",
+          "type": "number",
+          "label": {
+            "en": "Reporting interval association group 3",
+            "nl": "Informatie update interval associatie groep 3"
+          },
+          "hint": {
+            "en": "This parameter (113) determines the interval between reports to devices in association group 3.",
+            "nl": "Deze parameter (113) bepaalt de tijd tussen rapportages naar apparaten in de 3e associatie groep."
+          },
+          "zwave": {
+            "index": 113,
+            "size": 4
+          },
+          "attr": {
+            "min": 1,
+            "max": 2678400
+          },
+          "value": 1800
+        }
+      ]
+    },
+    {
+      "id": "ZW075",
+      "name": {
+        "en": "Smart Switch"
+      },
+      "class": "socket",
+      "capabilities": [
+        "measure_power",
+        "meter_power",
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/ZW075/assets/images/large.png",
+        "small": "/drivers/ZW075/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3,
+          27,
+          515
+        ],
+        "productId": [
+          24,
+          72,
+          75
+        ],
+        "zwaveAllianceProductId": 1416,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1416/Aeon Labs Smart Switch Gen5 manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "Press the action button on the Smart Switch to enter learn mode",
+            "nl": "Druk op de actie knop op de Smart Switch om de leer modus te activeren"
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate.\nWhen the switch is turned on or off using the action button, the switch will send a basic report of its status to the nodes in association group 1. To change what kind of signal is sent to the nodes in group 1, please see the detailed description of configuration parameter 80.\n"
+            }
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 3,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 80,
+            "size": 1,
+            "value": 2
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 91,
+            "size": 2,
+            "value": 25
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 30
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 12
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 30
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "3",
+          "type": "checkbox",
+          "label": {
+            "en": "Current overload protection",
+            "nl": "Bescherming tegen overbelasting"
+          },
+          "hint": {
+            "en": "This parameter (3) determines whether or not the Smart Switch protects plugged-in devices from overcurrent.",
+            "nl": "Deze parameter (3) bepaalt of de Smart Switch de ingeplugde appraten beschermd tegen overbelasting."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "value": true
+        },
+        {
+          "id": "20",
+          "type": "dropdown",
+          "label": {
+            "en": "Configure the output load status after re-power",
+            "nl": "Zet na een stroomonderbreking deze Smart Switch"
+          },
+          "hint": {
+            "en": "This parameter (20) determines the device behaviour after power loss.",
+            "nl": "Deze parameter (20) bepaalt het gedrag van het appraat na stroomuitval."
+          },
+          "zwave": {
+            "index": 20,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Status before re-power",
+                "nl": "Status voor stroomonderbreking"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Always on",
+                "nl": "Altijd aan"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Always off",
+                "nl": "Altijd uit"
+              }
+            }
+          ]
+        },
+        {
+          "id": "80",
+          "type": "checkbox",
+          "label": {
+            "en": "Notify associated devices when Smart Switch is toggled",
+            "nl": "Stuur notificaties naar geassocieerde apparaten wanneer de Smart Switch aan of uit wordt gezet"
+          },
+          "hint": {
+            "en": "This parameter (80) determines whether or not associated devices are notifiied of on/off events.",
+            "nl": "Deze parameter (80) bepaalt of geassocieerde apparaten notificaties ontvangen van aan/uit events."
+          },
+          "zwave": {
+            "index": 80,
+            "size": 1
+          },
+          "value": true
+        },
+        {
+          "id": "81",
+          "type": "dropdown",
+          "label": {
+            "en": "Configure the behaviour of the LED",
+            "nl": "Stel het gedrag van de LED in"
+          },
+          "hint": {
+            "en": "This parameter (81) determines the behaviour of the device LED.",
+            "nl": "Deze parameter (81) bepaalt het gedrag van de apparaat LED."
+          },
+          "zwave": {
+            "index": 81,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "LED color follows load",
+                "nl": "LED kleur representeert stroom verbruik"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "LED color follows load for 5 seconds",
+                "nl": "LED kleur representeert stroom verbruik voor 5 seconden"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Night light mode",
+                "nl": "Nacht lamp modus"
+              }
+            }
+          ]
+        },
+        {
+          "id": "91",
+          "type": "number",
+          "label": {
+            "en": "Minimum wattage change needed before an update report is send",
+            "nl": "Minimale verandering in wattage nodig voor het verzenden van een update"
+          },
+          "hint": {
+            "en": "This parameter (91) determines the minimum change of wattage before value reports are sent to Homey.",
+            "nl": "Deze parameter (91) bepaalt de minimale verandering in wattage voordat er rapporten worden verstuurd naar Homey."
+          },
+          "zwave": {
+            "index": 91,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32000
+          },
+          "value": 25
+        },
+        {
+          "id": "92",
+          "type": "number",
+          "label": {
+            "en": "Minimum wattage change (%) needed before an update report is send",
+            "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update"
+          },
+          "hint": {
+            "en": "This parameter (92) determines the minimum percentage change in wattage before value reports are sent to Homey.",
+            "nl": "Deze parameter (92) bepaalt de minimale verandering in procenten van het wattage voordat er rapporten worden verstuurd naar Homey."
+          },
+          "zwave": {
+            "index": 92,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "value": 30
+        },
+        {
+          "id": "102",
+          "type": "dropdown",
+          "label": {
+            "en": "Information reports send to association group 2",
+            "nl": "Informatie updates naar associatie groep 2"
+          },
+          "hint": {
+            "en": "This parameter (102) determines what information is sent to the devices in association group 2.",
+            "nl": "Deze parameter (102) bepaalt welke informatie er wordt verstuurd naar de apparaten in de 2e associatie groep."
+          },
+          "zwave": {
+            "index": 102,
+            "size": 4
+          },
+          "value": "8",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Geen"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Voltage (V)",
+                "nl": "Voltage (V)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Current (A)",
+                "nl": "Current (A)"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Power (Watt)",
+                "nl": "Vermogen (Watt)"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Energy (kWh)",
+                "nl": "Energie (kWh)"
+              }
+            },
+            {
+              "id": "12",
+              "label": {
+                "en": "Power (Watt) & Energy (kWh)",
+                "nl": "Vermogen (Watt) & Energie (kWh)"
+              }
+            },
+            {
+              "id": "15",
+              "label": {
+                "en": "Everything",
+                "nl": "Alles"
+              }
+            }
+          ]
+        },
+        {
+          "id": "103",
+          "type": "dropdown",
+          "label": {
+            "en": "Information reports send to association group 3",
+            "nl": "Informatie updates naar associatie groep 3"
+          },
+          "hint": {
+            "en": "This parameter (103) determines what information is sent to the devices in association group 3.",
+            "nl": "Deze parameter (103) bepaalt welke informatie er wordt verstuurd naar de apparaten in de 3e associatie groep."
+          },
+          "zwave": {
+            "index": 103,
+            "size": 4
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Geen"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Voltage (V)",
+                "nl": "Voltage (V)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Current (A)",
+                "nl": "Current (A)"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Power (Watt)",
+                "nl": "Vermogen (Watt)"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Energy (kWh)",
+                "nl": "Energie (kWh)"
+              }
+            },
+            {
+              "id": "12",
+              "label": {
+                "en": "Power (Watt) & Energy (kWh)",
+                "nl": "Vermogen (Watt) & Energie (kWh)"
+              }
+            },
+            {
+              "id": "15",
+              "label": {
+                "en": "Everything",
+                "nl": "Alles"
+              }
+            }
+          ]
+        },
+        {
+          "id": "111",
+          "type": "number",
+          "label": {
+            "en": "Reporting interval association group 1",
+            "nl": "Informatie update interval associatie groep 1"
+          },
+          "hint": {
+            "en": "This parameter (111) determines the interval between reports to Homey.",
+            "nl": "Deze parameter (111) bepaalt de tijd tussen rapportages naar Homey."
+          },
+          "zwave": {
+            "index": 111,
+            "size": 4
+          },
+          "attr": {
+            "min": 0,
+            "max": 268435456
+          },
+          "value": 30
+        },
+        {
+          "id": "112",
+          "type": "number",
+          "label": {
+            "en": "Reporting interval association group 2",
+            "nl": "Informatie update interval associatie groep 2"
+          },
+          "hint": {
+            "en": "This parameter (112) determines the interval between reports to devices in association group 2.",
+            "nl": "Deze parameter (112) bepaalt de tijd tussen rapportages naar apparaten in de 2e associatie groep."
+          },
+          "zwave": {
+            "index": 112,
+            "size": 4
+          },
+          "attr": {
+            "min": 0,
+            "max": 65535
+          },
+          "value": 600
+        },
+        {
+          "id": 113,
+          "type": "number",
+          "label": {
+            "en": "Reporting interval association group 3",
+            "nl": "Informatie update interval associatie groep 3"
+          },
+          "hint": {
+            "en": "This parameter (113) determines the interval between reports to devices in association group 3.",
+            "nl": "Deze parameter (113) bepaalt de tijd tussen rapportages naar apparaten in de 3e associatie groep."
+          },
+          "zwave": {
+            "index": 113,
+            "size": 4
+          },
+          "attr": {
+            "min": 1,
+            "max": 268435456
+          },
+          "value": 600
+        }
+      ]
+    },
+    {
+      "id": "ZW078",
+      "name": {
+        "en": "Heavy Duty Smart Switch"
+      },
+      "class": "socket",
+      "capabilities": [
+        "measure_power",
+        "meter_power",
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/ZW078/assets/images/large.png",
+        "small": "/drivers/ZW078/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          78
+        ],
+        "zwaveAllianceProductId": 1142,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1142/Heavy Duty Smart Switch Gen5 Manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "Press the action button on the Heavy Duty Smart Switch.",
+            "nl": "Druk op de actie knop op de Heavy Duty Smart Switch."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate.\nWhen the switch is turned on or off using the action button, the switch will send a basic report of its status to the nodes in association group 1. To change what kind of signal is sent to the nodes in group 1, please see the detailed description of configuration parameter 80.\n"
+            }
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 101,
+            "size": 4,
+            "value": 12
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "111",
+          "type": "number",
+          "label": {
+            "en": "Time between reports",
+            "nl": "Tijd tussen rapportages"
+          },
+          "hint": {
+            "en": "This parameter (111) determines the time interval between sending reports.",
+            "nl": "Deze parameter (111) bepaalt het tijdsinterval tussen het versturen van rapporten."
+          },
+          "zwave": {
+            "index": 111,
+            "size": 4
+          },
+          "attr": {
+            "min": 0,
+            "max": 268435456
+          },
+          "value": 300
+        },
+        {
+          "id": "20",
+          "value": "0",
+          "label": {
+            "en": "Status after re-power",
+            "nl": "Status na herstel stroomvoorziening"
+          },
+          "hint": {
+            "en": "This parameter (20) determines what the status of the device is after re-power on.",
+            "nl": "Deze parameter (20) bepaalt de status van het apparaat na herstel van de stroomvoorziening."
+          },
+          "zwave": {
+            "index": 20,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "2",
+              "label": {
+                "en": "The state will be off.",
+                "nl": "De status is uit."
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "The last state will be restored.",
+                "nl": "De laatst bekende status wordt hersteld."
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "The state will be on.",
+                "nl": "De status is aan."
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "3",
+          "value": false,
+          "label": {
+            "en": "Current Overload Protection",
+            "nl": "Overbelastingsbeveiliging"
+          },
+          "hint": {
+            "en": "This parameter (3) determines whether or not current overload protection is enabled.",
+            "nl": "Deze parameter (3) bepaalt of de overbelastingsbeveiliging ingeschakelt is."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "type": "checkbox"
+        },
+        {
+          "id": "80",
+          "value": "0",
+          "label": {
+            "en": "Enable notifications to associated devices",
+            "nl": "Schakel notificaties naar geassocieerde apparaten in"
+          },
+          "hint": {
+            "en": "This parameter (80) determines whether or not to send notifications to associatied devices when the Heavy Duty Smart Switch's has changed.",
+            "nl": "Deze parameter (80) bepaalt of er notificaties worden verstuurd naar geassocieerde apparaten wanneer de belasting van de Heavy Duty Smart Switch is veranderd."
+          },
+          "zwave": {
+            "index": 80,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "2",
+              "label": {
+                "en": "Send BASIC report command"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "Send nothing (disabled)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Send HAIL command"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "90",
+          "value": true,
+          "label": {
+            "en": "Enable automatic reports",
+            "nl": "Schakel automatische rapportage in"
+          },
+          "hint": {
+            "en": "This parameter (90) determines whether or not automatic reports are enabled.",
+            "nl": "Deze parameter (90) bepaalt of automatische rapportage is ingeschakeld."
+          },
+          "zwave": {
+            "index": 90,
+            "size": 1
+          },
+          "type": "checkbox"
+        },
+        {
+          "id": "91",
+          "value": 50,
+          "label": {
+            "en": "Wattage report change threshold",
+            "nl": "Wattage rapportage drempel"
+          },
+          "hint": {
+            "en": "This parameter (91) determines the minimum value change in wattage before an automatic report is send to Homey.",
+            "nl": "Deze parameter (91) bepaalt de minimum verandering in wattage voordat er een automatisch rapport naar Homey wordt verzonden."
+          },
+          "zwave": {
+            "index": 91,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32767
+          },
+          "type": "number"
+        },
+        {
+          "id": "92",
+          "value": 10,
+          "label": {
+            "en": "kWh report change threshold",
+            "nl": "kWh rapportage drempel"
+          },
+          "hint": {
+            "en": "This parameter (92) determines the minimum value change in kWh before an automatic report is send to Homey.",
+            "nl": "Deze parameter (92) bepaalt de minimum verandering in kWh voordat er een automatisch rapport naar Homey wordt verzonden."
+          },
+          "zwave": {
+            "index": 92,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "type": "number"
+        }
+      ]
+    },
     {
       "id": "ZW080",
       "name": {
