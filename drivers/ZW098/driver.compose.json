@@ -56,6 +56,13 @@
           "nl": "Doorstuur groep voor alle commando's verstuurd naar de {{driverNameNl}} door de main controller."
         }
       }
-    }
+    },
+    "defaultConfiguration": [
+      {
+        "id": 80,
+        "value": 2,
+        "size": 1
+      }
+    ]
   }
 }

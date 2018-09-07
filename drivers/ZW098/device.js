@@ -48,7 +48,11 @@ class AeotecLEDBulbDevice extends ZwaveDevice {
                 return await this._sendColors({red: rgb.red, green: rgb.green, blue: rgb.blue, warm: 0, cold: 0});
 			}
 		});
-	}
+
+        this.registerSetting("80", (input) => new Buffer([(input) ? 2 : 0]));
+        this.registerSetting("34", (input) => new Buffer([(input) ? 1 : 0]));
+        this.registerSetting("35", (input) => new Buffer([(input) ? 1 : 0]));
+    }
 
 	_map(inputStart, inputEnd, outputStart, outputEnd, input) {
         return outputStart + ((outputEnd - outputStart) / (inputEnd - inputStart)) * (input - inputStart);
