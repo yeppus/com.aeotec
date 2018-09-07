@@ -7,7 +7,7 @@
       "nl": "Status LED"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determins whether or not the device blinks a green led when a message gets relayed.",
+      "en": "This parameter ({{zwaveParameterIndex}}) determins whether or not the led blinks green when a message gets relayed.",
       "nl": "Deze parameter ({{zwaveParameterIndex}} bepaalt of het apparaat een groene led knippert als er een bericht doorgegeven wordt."
     },
     "zwave": {

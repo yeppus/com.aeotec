@@ -43,6 +43,753 @@
   },
   "drivers": [
     {
+      "id": "ZW111-C",
+      "name": {
+        "en": "Nano Dimmer"
+      },
+      "class": "light",
+      "capabilities": [
+        "dim",
+        "measure_power",
+        "meter_power",
+        "onoff"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "images": {
+        "large": "/drivers/ZW111-C/assets/images/large.png",
+        "small": "/drivers/ZW111-C/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3,
+          515
+        ],
+        "productId": [
+          111
+        ],
+        "zwaveAllianceProductId": 2135,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2135/Aeon Labs Nano Dimmer manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "Short press the action button on the back of the Nano Dimmer.",
+            "nl": "Druk kort op de actie knop op de achterkant van de Nano Dimmer."
+          }
+        },
+        "associationGroups": [
+          1,
+          3,
+          4
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "value": 3,
+            "size": 1
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 30
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "20",
+          "type": "dropdown",
+          "label": {
+            "en": "Configure the output load status after re-power",
+            "nl": "Zet na een stroomonderbreking deze status"
+          },
+          "hint": {
+            "en": "This parameter (20) determines the behaviour of the device after power loss.",
+            "nl": "Deze parameter (20) bepaalt het gedrag van het apparaat na stroom uitval."
+          },
+          "zwave": {
+            "index": 20,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Status before re-power",
+                "nl": "Status voor stroomonderbreking"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Always on",
+                "nl": "Altijd aan"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Always off",
+                "nl": "Altijd uit"
+              }
+            }
+          ]
+        },
+        {
+          "id": "81",
+          "type": "dropdown",
+          "label": {
+            "en": "Reports to association group 3",
+            "nl": "Metingen naar associatie groep 3"
+          },
+          "hint": {
+            "en": "This parameter (81) determines which reports are send to the devices in association group 3.",
+            "nl": "Deze parameter (81) bepaalt welke rapporten er worden verstuurd naar de apparaten in de 3e associatie groep."
+          },
+          "zwave": {
+            "index": 81,
+            "size": 1
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Niets"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Basic Set",
+                "nl": "Basic Set"
+              }
+            }
+          ]
+        },
+        {
+          "id": "82",
+          "type": "dropdown",
+          "label": {
+            "en": "Reports to association group 4",
+            "nl": "Metingen naar associatie groep 4"
+          },
+          "hint": {
+            "en": "This parameter (82) determines which reports are send to the devices in association group 4.",
+            "nl": "Deze parameter (82) bepaalt welke rapporten er worden verstuurd naar de apparaten in de 4e associatie groep."
+          },
+          "zwave": {
+            "index": 82,
+            "size": 1
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Niets"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Basic Set",
+                "nl": "Basic Set"
+              }
+            }
+          ]
+        },
+        {
+          "id": "91",
+          "type": "number",
+          "label": {
+            "en": "Minimum wattage change needed before an update report is send",
+            "nl": "Minimale verandering in wattage nodig voor het verzenden van een update"
+          },
+          "hint": {
+            "en": "This parameter (91) determines the minimum value change before a report is being send to Homey.",
+            "nl": "Deze parameter (91) bepaalt de minimale waardeverandering voordat er een rapport wordt verzonden naar Homey."
+          },
+          "zwave": {
+            "index": 91,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32000
+          },
+          "value": 25
+        },
+        {
+          "id": "92",
+          "type": "number",
+          "label": {
+            "en": "Minimum wattage change (%) needed before an update report is send",
+            "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update"
+          },
+          "hint": {
+            "en": "This parameter (92) determines the minimum percentage change before a report is being send to Homey.",
+            "nl": "Deze parameter (92) bepaalt de minimale verandering in percentage voordat er een rapport wordt verzonden naar Homey"
+          },
+          "zwave": {
+            "index": 92,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "value": 30
+        },
+        {
+          "id": "120",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 1",
+            "nl": "Schakelaar type input 1"
+          },
+          "hint": {
+            "en": "This parameter (120) determines the input device mode for input 1.",
+            "nl": "Deze parameter (120) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
+          },
+          "zwave": {
+            "index": 120,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            }
+          ]
+        },
+        {
+          "id": "121",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 2",
+            "nl": "Schakelaar type input 2"
+          },
+          "hint": {
+            "en": "This parameter (121) determines the input device mode for input 2.",
+            "nl": "Deze parameter (121) bepaalt de modus voor het invoer apparaat verbonden aan ingang 2."
+          },
+          "zwave": {
+            "index": 121,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZW112",
+      "name": {
+        "en": "Door/Window Sensor 6"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "alarm_contact"
+      ],
+      "images": {
+        "large": "/drivers/ZW112/assets/images/large.png",
+        "small": "/drivers/ZW112/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          2,
+          2562
+        ],
+        "productId": [
+          112
+        ],
+        "zwaveAllianceProductId": 2770,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2770/Door Window Sensor 6 manual.pdf",
+        "learnmode": {
+          "image": "/drivers/ZW112/assets/learnmode.svg",
+          "instruction": {
+            "en": "Short press the action button on the back of the Door/Window Sensor 6.",
+            "nl": "Druk kort op de actie knop op de achterkant van de Door/Window Sensor 6."
+          }
+        },
+        "associationGroups": [
+          1
+        ]
+      },
+      "settings": [
+        {
+          "id": "1",
+          "type": "dropdown",
+          "label": {
+            "en": "Sensor behaviour",
+            "nl": "Sensor gedrag"
+          },
+          "hint": {
+            "en": "This parameter (1) determines when the sensor triggers the contact alarm.",
+            "nl": "Deze parameter (1) bepaalt wanneer het contact alarm van de sensor afgaat."
+          },
+          "zwave": {
+            "index": 1,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "No contact = on, contact = off",
+                "nl": "Geen contact = aan, contact = uit"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "No contact = off, contact = on",
+                "nl": "Geen contact = uit, contact = aan"
+              }
+            }
+          ]
+        },
+        {
+          "id": "101",
+          "type": "checkbox",
+          "label": {
+            "en": "Low battery warning",
+            "nl": "Lege batterij waarschuwing"
+          },
+          "hint": {
+            "en": "This parameter (101) determines whether or not the device sends battery warnings.",
+            "nl": "Deze parameter (101) bepaalt of het apparaat batterij waarschuwingen verstuurd."
+          },
+          "zwave": {
+            "index": 101,
+            "size": 1
+          },
+          "value": true
+        },
+        {
+          "id": "111",
+          "type": "number",
+          "label": {
+            "en": "Low battery checking interval",
+            "nl": "Laag batterij niveau check interval"
+          },
+          "hint": {
+            "en": "This parameter (111) determines the interval at which the battery level will be checked. First 10 values are seconds, from there on out it adjusts per 4 minutes.",
+            "nl": "Deze parameter (111) bepaalt het interval waarop de battery wordt gecontroleerd. De eerste 10 waardes zijn in seconden, daarna past deze aan per 4 minuten."
+          },
+          "zwave": {
+            "index": 111,
+            "size": 4
+          },
+          "attr": {
+            "min": 0,
+            "max": 2147483647
+          },
+          "value": 86640
+        },
+        {
+          "id": 39,
+          "type": "number",
+          "label": {
+            "en": "Low battery value",
+            "nl": "Laag batterij niveau waarde"
+          },
+          "hint": {
+            "en": "This parameter (39) determines at which level the low battery alarm will go off.",
+            "nl": "Deze parameter (39) bepaalt op welk batterijniveau het lage niveau alarm afgaat."
+          },
+          "zwave": {
+            "index": 39,
+            "size": 1
+          },
+          "attr": {
+            "min": 10,
+            "max": 50
+          },
+          "value": 20
+        }
+      ]
+    },
+    {
+      "id": "ZW116",
+      "name": {
+        "en": "Nano Switch (ZW116)"
+      },
+      "class": "light",
+      "capabilities": [
+        "measure_power",
+        "meter_power",
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/ZW116/assets/images/large.png",
+        "small": "/drivers/ZW116/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3,
+          515
+        ],
+        "productId": [
+          116
+        ],
+        "zwaveAllianceProductId": 2289,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2289/Nano Switch manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "Press the action button on the back of the Nano Switch (ZW116).",
+            "nl": "Druk op de actie knop op de achterkant van de Nano Switch (ZW116)."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "value": 3,
+            "size": 1
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 30
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "20",
+          "type": "dropdown",
+          "label": {
+            "en": "Configure the output load status after re-power",
+            "nl": "Zet na een stroomonderbreking deze status"
+          },
+          "hint": {
+            "en": "This parameter (20) determines the behaviour after power was disconnected.",
+            "nl": "Deze parameter (20) bepaalt het gedrag nadat de stroomtoevoer is verbroken."
+          },
+          "zwave": {
+            "index": 20,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Status before re-power",
+                "nl": "Status voor stroomonderbreking"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Always on",
+                "nl": "Altijd aan"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Always off",
+                "nl": "Altijd uit"
+              }
+            }
+          ]
+        },
+        {
+          "id": "81",
+          "type": "dropdown",
+          "label": {
+            "en": "Reports to association group 3",
+            "nl": "Metingen naar associatie groep 3"
+          },
+          "hint": {
+            "en": "This parameter (81) determines what reports are sent to association group 3.",
+            "nl": "Deze parameter (81) bepaalt welke raporten er worden verzonden naar associatie groep 3."
+          },
+          "zwave": {
+            "index": 81,
+            "size": 1
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Niets"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Basic Set",
+                "nl": "Basic Set"
+              }
+            }
+          ]
+        },
+        {
+          "id": "82",
+          "type": "dropdown",
+          "label": {
+            "en": "Reports to association group 4",
+            "nl": "Metingen naar associatie groep 4"
+          },
+          "hint": {
+            "en": "This parameter (82) determines what reports are sent to association group 4.",
+            "nl": "Deze parameter (82) bepaalt welke raporten er worden verzonden naar associatie groep 4."
+          },
+          "zwave": {
+            "index": 82,
+            "size": 1
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Niets"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Basic Set",
+                "nl": "Basic Set"
+              }
+            }
+          ]
+        },
+        {
+          "id": "120",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 1",
+            "nl": "Schakelaar type input 1"
+          },
+          "hint": {
+            "en": "This parameter (120) determines what type of input is connected to input 1.",
+            "nl": "Deze parameter (120) bepaalt welk type input apparaat er is verbonden op input 1."
+          },
+          "zwave": {
+            "index": 120,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            }
+          ]
+        },
+        {
+          "id": "121",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 2",
+            "nl": "Schakelaar type input 2"
+          },
+          "hint": {
+            "en": "This parameter (121) determines what type of input is connected to input 2.",
+            "nl": "Deze parameter (121) bepaalt welk type input apparaat er is verbonden op input 2."
+          },
+          "zwave": {
+            "index": 121,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZW117",
+      "name": {
+        "en": "Range Extender 6"
+      },
+      "class": "other",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/ZW117/assets/images/large.png",
+        "small": "/drivers/ZW117/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          4,
+          516,
+          2564
+        ],
+        "productId": [
+          117
+        ],
+        "zwaveAllianceProductId": 2520,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2520/Range Extender 6 manual.pdf",
+        "learnmode": {
+          "image": "/drivers/ZW117/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the action button on the Range Extender 6.",
+            "nl": "Druk op de actie knop op de Range Extender 6."
+          }
+        },
+        "associationGroups": [
+          1
+        ]
+      },
+      "settings": [
+        {
+          "id": "82",
+          "value": true,
+          "label": {
+            "en": "Status LED",
+            "nl": "Status LED"
+          },
+          "hint": {
+            "en": "This parameter (82) determins whether or not the led blinks green when a message gets relayed.",
+            "nl": "Deze parameter (82 bepaalt of het apparaat een groene led knippert als er een bericht doorgegeven wordt."
+          },
+          "zwave": {
+            "index": 82,
+            "size": 1
+          },
+          "type": "checkbox"
+        }
+      ]
+    },
+    {
       "id": "ZW120",
       "name": {
         "en": "Door/Window Sensor Gen5"
@@ -340,7 +1087,7 @@
           "type": "checkbox",
           "label": {
             "en": "Set last brightness level on color switch",
-            "nl": "Zet het laatste helderheids niveau op kleurverandering"
+            "nl": "Zet het laatste helderheidsniveau op kleurverandering"
           },
           "hint": {
             "en": "This parameter (34) determines whether or not the LED Strip turns to it's last brightness setting when receiving the Color Switch Set Command.",
@@ -501,7 +1248,7 @@
             "nl": "Stel de dim modus in"
           },
           "hint": {
-            "en": "This parameter (112) determines the dimmer mode for the LED Strip",
+            "en": "This parameter (112) determines the dim mode for the LED Strip",
             "nl": "Deze parameter (112) bepaalt de dim modus voor de LED Strip"
           },
           "zwave": {

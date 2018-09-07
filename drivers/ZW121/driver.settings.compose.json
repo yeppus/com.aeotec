@@ -61,7 +61,7 @@
     "type": "checkbox",
     "label": {
       "en": "Set last brightness level on color switch",
-      "nl": "Zet het laatste helderheids niveau op kleurverandering"
+      "nl": "Zet het laatste helderheidsniveau op kleurverandering"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the {{driverNameEn}} turns to it's last brightness setting when receiving the Color Switch Set Command.",
@@ -222,7 +222,7 @@
       "nl": "Stel de dim modus in"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the dimmer mode for the {{driverNameEn}}",
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the dim mode for the {{driverNameEn}}",
       "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de dim modus voor de {{driverNameNl}}"
     },
     "zwave": {
