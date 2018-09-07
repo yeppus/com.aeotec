@@ -2,7 +2,7 @@
 
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
-class MyDevice extends ZwaveDevice {
+class ZW078 extends ZwaveDevice {
 	
 	onMeshInit() {
 		this.registerCapability('onoff', 'BINARY_SWITCH');
@@ -13,4 +13,4 @@ class MyDevice extends ZwaveDevice {
 	
 }
 
-module.exports = MyDevice;
+module.exports = ZW078;
