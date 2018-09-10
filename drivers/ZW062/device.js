@@ -54,10 +54,10 @@ class AeotecGarageControllerDevice extends ZwaveDevice {
                 'Default': false
             },
             'Configuration Value': new Buffer([
-                newSettings[`${parameter}1`],
-                newSettings[`${parameter}2`],
-                newSettings[`${parameter}3`],
-                newSettings[`${parameter}4`],
+                this.getSetting(`${parameter}1`),
+                this.getSetting(`${parameter}2`),
+                this.getSetting(`${parameter}3`),
+                this.getSetting(`${parameter}4`),
             ])
         });
 	}
