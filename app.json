@@ -3,7 +3,7 @@
   "name": {
     "en": "Aeotec"
   },
-  "version": "2.0.4",
+  "version": "2.0.5",
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "category": [
@@ -1124,7 +1124,8 @@
       "zwave": {
         "manufacturerId": 134,
         "productTypeId": [
-          3
+          3,
+          515
         ],
         "productId": [
           62
@@ -3939,7 +3940,8 @@
       "zwave": {
         "manufacturerId": 134,
         "productTypeId": [
-          3
+          3,
+          515
         ],
         "productId": [
           98
@@ -7036,7 +7038,7 @@
     {
       "id": "ZW132",
       "name": {
-        "en": "Dual Nano Switch"
+        "en": "Dual Nano Switch (ZW139)"
       },
       "class": "light",
       "capabilities": [
@@ -7061,8 +7063,8 @@
         "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2286/Oomi Dual In-Wall Switch manual.pdf",
         "learnmode": {
           "instruction": {
-            "en": "Press the action button on the back of the Dual Nano Switch.",
-            "nl": "Druk op de actie knop op de achterkant van de Dual Nano Switch."
+            "en": "Press the action button on the back of the Dual Nano Switch (ZW139).",
+            "nl": "Druk op de actie knop op de achterkant van de Dual Nano Switch (ZW139)."
           }
         },
         "associationGroups": [
@@ -7088,8 +7090,9 @@
         "multiChannelNodes": {
           "1": {
             "name": {
-              "en": "Switch 1"
+              "en": "Dual Nano Switch 1"
             },
+            "icon": "/drivers/ZW132/assets/icon.svg",
             "class": "light",
             "capabilities": [
               "onoff"
@@ -7097,8 +7100,9 @@
           },
           "2": {
             "name": {
-              "en": "Switch 1"
+              "en": "Dual Nano Switch 2"
             },
+            "icon": "/drivers/ZW132/assets/icon.svg",
             "class": "light",
             "capabilities": [
               "onoff"
