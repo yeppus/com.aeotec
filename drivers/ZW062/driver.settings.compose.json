@@ -1,5 +1,18 @@
 [
   {
+    "id": "flipped",
+    "type": "checkbox",
+    "label": {
+      "en": "Flip open/closed status for {{driverNameEn}}",
+      "nl": "Keer de open/gesloten status om voor de {{driverNameNl}}"
+    },
+    "hint": {
+      "en": "This parameter optionally flips the open/closed status for the {{driverNameEn}}",
+      "nl": "Deze parameter keert de open/gesloten status om voor de {{driverNameNl}}"
+    },
+    "value": false
+  },
+  {
     "id": "32",
     "type": "checkbox",
     "label": {
