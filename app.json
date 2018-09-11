@@ -3,7 +3,7 @@
   "name": {
     "en": "Aeotec"
   },
-  "version": "2.0.6",
+  "version": "2.0.7",
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "category": [
@@ -1163,6 +1163,19 @@
         ]
       },
       "settings": [
+        {
+          "id": "flipped",
+          "type": "checkbox",
+          "label": {
+            "en": "Flip open/closed status for Garage Door Controller Gen5",
+            "nl": "Keer de open/gesloten status om voor de Garage Door Controller Gen5"
+          },
+          "hint": {
+            "en": "This parameter optionally flips the open/closed status for the Garage Door Controller Gen5",
+            "nl": "Deze parameter keert de open/gesloten status om voor de Garage Door Controller Gen5"
+          },
+          "value": false
+        },
         {
           "id": "32",
           "type": "checkbox",
@@ -6163,10 +6176,12 @@
       "zwave": {
         "manufacturerId": 134,
         "productTypeId": [
-          2
+          2,
+          514
         ],
         "productId": [
-          120
+          120,
+          122
         ],
         "zwaveAllianceProductId": 1579,
         "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1579/Door Window Sensor Gen5 manual.pdf",
