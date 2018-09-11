@@ -46,11 +46,13 @@ class AeotecMultiSensorSixDevice extends ZwaveDevice {
 	}
 
 	onSettings(oldSettings, newSettings, changedKeys) {
-		if (changedKeys.includes('tamper_cancellation')) {
+        super.onSettings(oldSettings, newSettings, changedKeys);
+
+        if (changedKeys.includes('tamper_cancellation')) {
 			this._cancellationTimeout =  this.getSetting('tamper_cancellation');
 		}
 
-		return true;
+		return Promise.resolve();
 	}
 }
 
