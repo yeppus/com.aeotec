@@ -26,8 +26,8 @@
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2289/Nano Switch manual.pdf",
     "learnmode": {
       "instruction": {
-        "en": "Press the action button on the back of the {{driverNameEn}}.",
-        "nl": "Druk op de actie knop op de achterkant van de {{driverNameNl}}."
+        "en": "Press the action button on the back of the {{driverNameEn}}. For secure pairing press the action button twice.",
+        "nl": "Druk op de actie knop op de achterkant van de {{driverNameNl}}. Voor beveiligd koppelen druk tweemaal op de actie knop."
       }
     },
     "associationGroups": [

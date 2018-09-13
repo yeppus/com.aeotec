@@ -28,8 +28,8 @@
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1579/Door Window Sensor Gen5 manual.pdf",
     "learnmode": {
       "instruction": {
-        "en": "Press the action button on the {{driverNameEn}}.",
-        "nl": "Druk op de actie knop op de {{driverNameNl}}."
+        "en": "Press the action button on the {{driverNameEn}}. For secure pairing press the action button twice.",
+        "nl": "Druk op de actie knop op de {{driverNameNl}}. Voor beveiligd koppelen druk tweemaal op de actie knop."
       }
     },
     "associationGroups": [

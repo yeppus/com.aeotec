@@ -3,7 +3,7 @@
   "name": {
     "en": "Aeotec"
   },
-  "version": "2.0.8",
+  "version": "2.0.9",
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "category": [
@@ -2955,7 +2955,8 @@
       "zwave": {
         "manufacturerId": 134,
         "productTypeId": [
-          2
+          2,
+          514
         ],
         "productId": [
           54,
@@ -3964,8 +3965,8 @@
         "learnmode": {
           "image": "/drivers/ZW098/assets/learnmode.svg",
           "instruction": {
-            "en": "Quickly turn the LED Bulb off and on again.",
-            "nl": "Schakel de LED lamp snel uit en aan."
+            "en": "Quickly turn the LED Bulb off and on again. For secure pairing quickly turn the LED Bulb off and on 5 times.",
+            "nl": "Schakel de LED lamp snel uit en aan. Voor beveiligd koppelen schakel de LED lamp 5 keer snel uit en aan."
           }
         },
         "unlearnmode": {
@@ -4468,11 +4469,11 @@
       "class": "sensor",
       "capabilities": [
         "measure_battery",
-        "measure_humidity",
-        "measure_luminance",
         "alarm_motion",
         "alarm_tamper",
         "measure_temperature",
+        "measure_luminance",
+        "measure_humidity",
         "measure_ultraviolet"
       ],
       "images": {
@@ -4945,8 +4946,8 @@
         "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2135/Aeon Labs Nano Dimmer manual.pdf",
         "learnmode": {
           "instruction": {
-            "en": "Short press the action button on the back of the Nano Dimmer.",
-            "nl": "Druk kort op de actie knop op de achterkant van de Nano Dimmer."
+            "en": "Short press the action button on the back of the Nano Dimmer. For secure pairing press the action button twice.",
+            "nl": "Druk kort op de actie knop op de achterkant van de Nano Dimmer. Voor beveiligd koppelen druk tweemaal op de actie knop."
           }
         },
         "associationGroups": [
@@ -5235,7 +5236,8 @@
         "manufacturerId": 134,
         "productTypeId": [
           2,
-          2562
+          2562,
+          514
         ],
         "productId": [
           112
@@ -5376,8 +5378,8 @@
         "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2289/Nano Switch manual.pdf",
         "learnmode": {
           "instruction": {
-            "en": "Press the action button on the back of the Nano Switch (ZW116).",
-            "nl": "Druk op de actie knop op de achterkant van de Nano Switch (ZW116)."
+            "en": "Press the action button on the back of the Nano Switch (ZW116). For secure pairing press the action button twice.",
+            "nl": "Druk op de actie knop op de achterkant van de Nano Switch (ZW116). Voor beveiligd koppelen druk tweemaal op de actie knop."
           }
         },
         "associationGroups": [
@@ -5630,8 +5632,8 @@
         "learnmode": {
           "image": "/drivers/ZW117/assets/learnmode.svg",
           "instruction": {
-            "en": "Press the action button on the Range Extender 6.",
-            "nl": "Druk op de actie knop op de Range Extender 6."
+            "en": "Press the action button on the Range Extender 6. For secure pairing press the action button twice.",
+            "nl": "Druk op de actie knop op de Range Extender 6. Druk tweemaal op de actie knop om het apparaat beveiligd te koppelen."
           }
         },
         "associationGroups": [
@@ -5874,7 +5876,8 @@
       "zwave": {
         "manufacturerId": 134,
         "productTypeId": [
-          3
+          3,
+          515
         ],
         "productId": [
           121
@@ -6188,8 +6191,8 @@
         "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1579/Door Window Sensor Gen5 manual.pdf",
         "learnmode": {
           "instruction": {
-            "en": "Press the action button on the Water Sensor 6.",
-            "nl": "Druk op de actie knop op de Water Sensor 6."
+            "en": "Press the action button on the Water Sensor 6. For secure pairing press the action button twice.",
+            "nl": "Druk op de actie knop op de Water Sensor 6. Voor beveiligd koppelen druk tweemaal op de actie knop."
           }
         },
         "associationGroups": [
@@ -6380,7 +6383,8 @@
         "productTypeId": [
           2,
           258,
-          513
+          513,
+          514
         ],
         "productId": [
           129
@@ -6713,7 +6717,8 @@
         "productTypeId": [
           2,
           258,
-          513
+          513,
+          514
         ],
         "productId": [
           130
@@ -7054,7 +7059,7 @@
     {
       "id": "ZW132",
       "name": {
-        "en": "Dual Nano Switch (ZW139)"
+        "en": "Dual Nano Switch (ZW132)"
       },
       "class": "light",
       "capabilities": [
@@ -7079,8 +7084,8 @@
         "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2286/Oomi Dual In-Wall Switch manual.pdf",
         "learnmode": {
           "instruction": {
-            "en": "Press the action button on the back of the Dual Nano Switch (ZW139).",
-            "nl": "Druk op de actie knop op de achterkant van de Dual Nano Switch (ZW139)."
+            "en": "Press the action button on the back of the Dual Nano Switch (ZW132).",
+            "nl": "Druk op de actie knop op de achterkant van de Dual Nano Switch (ZW132)."
           }
         },
         "associationGroups": [

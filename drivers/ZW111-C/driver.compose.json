@@ -32,8 +32,8 @@
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2135/Aeon Labs Nano Dimmer manual.pdf",
     "learnmode": {
       "instruction": {
-        "en": "Short press the action button on the back of the Nano Dimmer.",
-        "nl": "Druk kort op de actie knop op de achterkant van de Nano Dimmer."
+        "en": "Short press the action button on the back of the Nano Dimmer. For secure pairing press the action button twice.",
+        "nl": "Druk kort op de actie knop op de achterkant van de Nano Dimmer. Voor beveiligd koppelen druk tweemaal op de actie knop."
       }
     },
     "associationGroups": [

@@ -24,8 +24,8 @@
     "learnmode": {
       "image": "/drivers/ZW117/assets/learnmode.svg",
       "instruction": {
-        "en": "Press the action button on the {{driverNameEn}}.",
-        "nl": "Druk op de actie knop op de {{driverNameNl}}."
+        "en": "Press the action button on the {{driverNameEn}}. For secure pairing press the action button twice.",
+        "nl": "Druk op de actie knop op de {{driverNameNl}}. Druk tweemaal op de actie knop om het apparaat beveiligd te koppelen."
       }
     },
     "associationGroups": [

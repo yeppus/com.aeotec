@@ -31,8 +31,8 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
-        "en": "Quickly turn the {{driverNameEn}} off and on again.",
-        "nl": "Schakel de {{driverNameNl}} snel uit en aan."
+        "en": "Quickly turn the {{driverNameEn}} off and on again. For secure pairing quickly turn the {{driverNameEn}} off and on 5 times.",
+        "nl": "Schakel de {{driverNameNl}} snel uit en aan. Voor beveiligd koppelen schakel de {{driverNameNl}} 5 keer snel uit en aan."
       }
     },
     "unlearnmode": {
