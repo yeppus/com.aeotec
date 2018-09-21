@@ -6,6 +6,7 @@
   "version": "2.0.10",
   "compatibility": ">=1.5.0",
   "sdk": 2,
+  "brandColor": "#00A2DA",
   "category": [
     "appliances",
     "lights",
@@ -5846,6 +5847,13 @@
         "associationGroups": [
           1,
           2
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "size": 1,
+            "value": 2
+          }
         ]
       },
       "settings": [
@@ -6032,7 +6040,7 @@
             "index": 80,
             "size": 1
           },
-          "value": "3",
+          "value": "2",
           "values": [
             {
               "id": "0",
@@ -7068,6 +7076,8 @@
             "icon": "/drivers/ZW132/assets/icon.svg",
             "class": "light",
             "capabilities": [
+              "measure_power",
+              "meter_power",
               "onoff"
             ]
           },
@@ -7078,6 +7088,8 @@
             "icon": "/drivers/ZW132/assets/icon.svg",
             "class": "light",
             "capabilities": [
+              "measure_power",
+              "meter_power",
               "onoff"
             ]
           }

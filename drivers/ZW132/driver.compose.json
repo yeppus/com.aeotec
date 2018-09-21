@@ -58,6 +58,8 @@
         "icon": "{{driverAssetsPath}}/icon.svg",
         "class": "light",
         "capabilities": [
+          "measure_power",
+          "meter_power",
           "onoff"
         ]
       },
@@ -68,6 +70,8 @@
         "icon": "{{driverAssetsPath}}/icon.svg",
         "class": "light",
         "capabilities": [
+          "measure_power",
+          "meter_power",
           "onoff"
         ]
       }

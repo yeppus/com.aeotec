@@ -60,6 +60,8 @@ class ZW129 extends ZwaveDevice {
 	}
 
 	async onSettings(oldSettings, newSettings, changedKeys) {
+		super.onSettings(oldSettings, newSettings, changedKeys);
+
 		if (newSettings.rgb_name === 'custom') {
 			await this.configurationSet({
 				index: 5,
