@@ -62,21 +62,37 @@ class ZW130 extends ZwaveDevice {
 	}
 
 	async onSettings(oldSettings, newSettings, changedKeys) {
-		if (newSettings.rgb_name === 'custom') {
-			await this.configurationSet({
-				index: 5,
-				size: 4,
-			}, new Buffer([newSettings.rgb_r, newSettings.rgb_g, newSettings.rgb_b, 0]));
-		} else {
-			const valueArray = newSettings.rgb_name.split(',');
-			const multiplier = newSettings.rgb_name_level / 100 || 1;
+		super.onSettings(oldSettings, newSettings, changedKeys);
 
-			await this.configurationSet({
-				index: 5,
-				size: 4,
-			}, new Buffer(valueArray[0] * multiplier, valueArray[1] * multiplier, valueArray[2] * multiplier, 0));
-		}
-	}
+		if (changedKeys.includes('rgb_name')
+			|| changedKeys.includes('rgb_r')
+			|| changedKeys.includes('rgb_g')
+			|| changedKeys.includes('rgb_b')) {
+            this.log('color changed');
+
+            if (newSettings.rgb_name === 'custom'
+                && newSettings.hasOwnProperty('rgb_r')
+                && newSettings.hasOwnProperty('rgb_g')
+                && newSettings.hasOwnProperty('rgb_b')) {
+            	this.log('custom color');
+                return await this.configurationSet({
+                    index: 5,
+                    size: 4,
+                }, new Buffer([newSettings.rgb_r, newSettings.rgb_g, newSettings.rgb_b, 0]));
+            }
+            this.log('listed color');
+
+            const valueArray = newSettings.rgb_name.split(',');
+            const multiplier = newSettings.rgb_name_level / 100 || 1;
+
+            return await this.configurationSet({
+                index: 5,
+                size: 4,
+            }, new Buffer([Math.round(valueArray[0] * multiplier), Math.round(valueArray[1] * multiplier), Math.round(valueArray[2] * multiplier), 0]));
+        }
+
+        this.log(changedKeys);
+    }
 
 	_sceneRunListener(args, state) {
 		if (!args) return Promise.reject('No arguments provided');
