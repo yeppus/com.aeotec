@@ -3,7 +3,7 @@
   "name": {
     "en": "Aeotec"
   },
-  "version": "2.0.10",
+  "version": "2.0.11",
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "brandColor": "#00A2DA",
@@ -2848,8 +2848,8 @@
         },
         "unlearnmode": {
           "instruction": {
-            "en": "Short press the \"Exclude\" button on the Key Fob",
-            "nl": "Druk kort op de \"Exclude\" knop op de Key Fob"
+            "en": "Return the device into Setup mode by pressing the \"Mode\" and \"Learn\" buttons simultaneously for 3 seconds, then short press the \"Learn\" button on the Key Fob",
+            "nl": "Switch het apparaat naar de Setup modus door de \"Mode\" en \"Learn\" knoppen tegelijk in te drukken voor 3 seconden, druk daarna kort op de \"Learn\" knop op de Key Fob"
           }
         },
         "associationGroups": [
@@ -4439,9 +4439,7 @@
           2,
           514
         ],
-        "productId": [
-          100
-        ],
+        "productId": 100,
         "zwaveAllianceProductId": 2714,
         "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2714/Aeon Labs MultiSensor 6 manual.pdf",
         "learnmode": {
