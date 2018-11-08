@@ -13,17 +13,17 @@ class ZW130 extends ZwaveDevice {
 		this._dimTrigger = new Homey.FlowCardTriggerDevice('zw130_dim')
 			.registerRunListener(this._dimRunListener.bind(this)).register();
 
-		this.registerCapability('measure_battery', 'BATTERY', {
-			reportParser: (report) => {
-				if (report['Notification Type'] === 'Power Management') {
-					if (report.Event === 13) this._batteryTrigger.trigger(this, null, null);
-					if (report.Event === 15) return true;
-					return false;
-				}
-				return null;
-			},
-		});
-		this.registerCapability('alarm_battery', 'NOTIFICATION');
+		this.registerCapability('measure_battery', 'BATTERY');
+		this.registerCapability('alarm_battery', 'NOTIFICATION', {
+            reportParser: (report) => {
+                if (report['Notification Type'] === 'Power Management') {
+                    if (report.Event === 13) this._batteryTrigger.trigger(this, null, null);
+                    else if (report.Event === 15) return true;
+                    return false;
+                }
+                return null;
+            },
+        });
 
 		this.registerReportListener('CENTRAL_SCENE', 'CENTRAL_SCENE_NOTIFICATION', (report) => {
 			if (report.hasOwnProperty('Properties1') &&
