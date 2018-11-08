@@ -6,12 +6,9 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 class ZW130 extends ZwaveDevice {
 
 	onMeshInit() {
-		this._batteryTrigger = new Homey.FlowCardTriggerDevice('zw130_battery_full')
-			.register();
-		this._sceneTrigger = new Homey.FlowCardTriggerDevice('zw130_scene')
-			.registerRunListener(this._sceneRunListener.bind(this)).register();
-		this._dimTrigger = new Homey.FlowCardTriggerDevice('zw130_dim')
-			.registerRunListener(this._dimRunListener.bind(this)).register();
+        this._batteryTrigger = this.getDriver().batteryTrigger;
+        this._sceneTrigger = this.getDriver().sceneTrigger;
+        this._dimTrigger = this.getDriver().dimTrigger;
 
 		this.registerCapability('measure_battery', 'BATTERY');
 		this.registerCapability('alarm_battery', 'NOTIFICATION', {
@@ -94,7 +91,7 @@ class ZW130 extends ZwaveDevice {
         this.log(changedKeys);
     }
 
-	_sceneRunListener(args, state) {
+	sceneRunListener(args, state) {
 		if (!args) return Promise.reject('No arguments provided');
 		if (!state) return Promise.reject('No state provided');
 
@@ -106,7 +103,7 @@ class ZW130 extends ZwaveDevice {
 		} return Promise.reject('Button or scene undefined in args or state');
 	}
 
-	_dimRunListener(args, state) {
+	dimRunListener(args, state) {
 		if (!args) return Promise.reject('No arguments provided');
 		if (!state) return Promise.reject('No state provided');
 
