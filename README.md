@@ -4,6 +4,9 @@ This app adds support for Aeotec devices in Homey.
 
 ### Changelog:
 
+**2.0.1 - 2.0.14**
+* Bug fixes
+
 **2.0.0**
 * WARNING: Preview release, this might be unstable
 * App now fully implemented in SDK2
