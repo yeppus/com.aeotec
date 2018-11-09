@@ -4,6 +4,13 @@ This app adds support for Aeotec devices in Homey.
 
 ### Changelog:
 
+**2.0.16**
+* Fixed Flows for the Wallmote Quad
+* Fixed on/off status for the Heavy Duty Switch
+
+**2.0.15**
+* Fixed an issue with App store compatibility
+
 **2.0.1 - 2.0.14**
 * Bug fixes
 
