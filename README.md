@@ -4,6 +4,9 @@ This app adds support for Aeotec devices in Homey.
 
 ### Changelog:
 
+**2.0.18**
+* Fixes for the RGB bulb, re-added the rainbow mode Flow as well
+
 **2.0.16**
 * Fixed Flows for the Wallmote Quad
 * Fixed on/off status for the Heavy Duty Switch
