@@ -5,7 +5,7 @@ const zwaveUtils = require('homey-meshdriver').Util;
 
 class AeotecLEDBulbDevice extends ZwaveDevice {
 	onMeshInit() {
-		this.registerCapability('onoff', 'BASIC');
+		this.registerCapability('onoff', 'SWITCH_MULTILEVEL');
 		this.registerCapability('dim', 'SWITCH_MULTILEVEL');
 
 		this.registerMultipleCapabilityListener(['light_hue', 'light_saturation', 'light_temperature', 'light_mode'], async (values, options) => {
