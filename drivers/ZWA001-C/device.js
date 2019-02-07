@@ -5,7 +5,7 @@ const DEFAULT_COLOR_DURATION = 0;
 
 class AeotecLEDBulb6MultiWhiteDevice extends ZwaveDevice {
 	onMeshInit() {
-		this.registerCapability('onoff', 'BASIC');
+		this.registerCapability('onoff', 'SWITCH_MULTILEVEL');
 		this.registerCapability('dim', 'SWITCH_MULTILEVEL');
 
 		this.registerMultipleCapabilityListener(['light_temperature'], async (values, options) => {
