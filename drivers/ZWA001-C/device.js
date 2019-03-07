@@ -8,19 +8,19 @@ class AeotecLEDBulb6MultiWhiteDevice extends ZwaveDevice {
 		this.registerCapability('onoff', 'SWITCH_MULTILEVEL');
 		this.registerCapability('dim', 'SWITCH_MULTILEVEL');
 
-		this.registerMultipleCapabilityListener(['light_temperature'], async (values, options) => {
+		this.registerCapabilityListener('light_temperature', async (value, options) => {
             let temp = {cw: 0, ww: 0, colortemp: 2700};
 
-            if (typeof values.light_temperature === 'number') {
-                if (values.light_temperature < .5) {
+            if (typeof value === 'number') {
+                if (value < .5) {
                     temp.cw = 255;
                     temp.ww = 0;
-                    temp.colortemp = this._map(0, 0.5, 6500, 5000, values.light_temperature)
+                    temp.colortemp = this._map(0, 0.5, 6500, 5000, value)
                     await this.configurationSet({index: 82, size: 2}, temp.colortemp)
                 } else {
                     temp.cw = 0;
                     temp.ww = 255;
-                    temp.colortemp = this._map(0.5, 1, 4999, 2700, values.light_temperature)
+                    temp.colortemp = this._map(0.5, 1, 4999, 2700, value)
                     await this.configurationSet({index: 81, size: 2}, temp.colortemp)
                 }
             }
